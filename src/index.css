@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100vh;
+  min-width: 300px;
+  overflow: hidden;
+}
+
+input,
+button,
+select {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: inherit;
+  font-size: 1rem;
+  background: transparent;
+  outline: none;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+button {
+  background: transparent;
+}
+
+a {
+  text-decoration: none;
+}

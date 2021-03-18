@@ -1,0 +1,140 @@
+.circle__game--red{
+  
+
+    background: radial-gradient(circle at 65% 15%, 
+    white 1px, 
+    rgb(255, 79, 79) 10%, 
+    rgb(255, 0, 0) 60%, 
+    rgb(255, 87, 87) 100%);  
+    padding: 0.9rem;
+    box-shadow: -1px 1px 2px rgba(255, 255, 255, 0.904);
+}
+
+
+.circle__game--blue{
+
+    background: radial-gradient(circle at 65% 15%, 
+    white 1px, 
+    rgb(0, 119, 255) 10%, 
+    blue 60%, 
+    rgb(0, 119, 255) 100%);  
+    padding:0.9rem;
+    box-shadow: -1px 1px 2px rgba(255, 255, 255, 0.904);
+}
+
+.circle__game--yellow{
+
+    background: radial-gradient(circle at 65% 15%, 
+    white 1px, 
+    yellow 10%, 
+    rgb(255,215,0) 60%, 
+    yellow 100%);  
+    padding:0.9rem;
+    box-shadow: -1px 1px 2px rgba(255, 255, 255, 0.904);
+}
+
+.circle__game--green{
+
+    background: radial-gradient(circle at 65% 15%, 
+    white 1px, 
+    rgb(9, 255, 0) 10%, 
+    rgb(36, 153, 0) 60%, 
+    rgb(9, 255, 0) 100%);  
+    padding:0.9rem;
+    box-shadow: -1px 1px 2px rgba(255, 255, 255, 0.904);
+}
+
+.circle__game--purple{
+
+    background: radial-gradient(circle at 65% 15%, 
+    white 1px, 
+    rgb(208, 128, 255) 10%, 
+    rgb(140, 0, 255) 60%, 
+    rgb(197, 96, 255) 100%);  
+    padding:0.9rem;
+    box-shadow: -1px 1px 2px rgba(255, 255, 255, 0.904);
+
+}
+
+.circle__game--pink{
+
+    background: radial-gradient(circle at 65% 15%, 
+    white 1px, 
+    rgb(250, 116, 250) 10%, 
+    rgb(225, 0, 255) 60%, 
+    rgb(253, 136, 253) 100%);  
+    padding:0.9rem;
+    box-shadow: -1px 1px 2px rgba(255, 255, 255, 0.904);
+}
+
+.circle__game--orange{
+
+    background: radial-gradient(circle at 65% 15%, 
+    white 1px, 
+    rgb(248, 193, 91) 10%, 
+    orange 60%, 
+    rgb(255, 202, 102) 100%);  
+    padding:0.9rem;
+    box-shadow: -1px 1px 2px rgba(255, 255, 255, 0.904);
+
+}
+
+.circle__game--lightskyblue{
+
+    background: radial-gradient(circle at 65% 15%, 
+    white 1px, 
+    lightskyblue 10%, 
+    rgb(0, 157, 255) 60%, 
+    lightskyblue 100%);  
+    padding:0.9rem;
+    box-shadow: -1px 1px 2px rgba(255, 255, 255, 0.904);
+
+}
+
+.circle__game--brown{
+
+    background: radial-gradient(circle at 65% 15%, 
+    white 1px, 
+    brown 10%, 
+    rgb(163, 74, 74) 60%, 
+    brown 100%);  
+    padding:0.9rem;
+    box-shadow: -1px 1px 2px rgba(255, 255, 255, 0.904);
+
+}
+
+.circle__game--grey{
+
+    background: radial-gradient(circle at 65% 15%, 
+    white 1px, 
+    grey 10%, 
+    rgb(194, 194, 194) 60%, 
+    grey 100%);  
+    padding:0.9rem;
+    box-shadow: -1px 1px 2px rgba(255, 255, 255, 0.904);
+
+}
+
+.circle__game--white{
+
+    background: radial-gradient(circle at 65% 15%, 
+    white 1px, 
+    rgb(247, 247, 247) 10%, 
+    rgb(219, 219, 219) 60%, 
+    rgb(247, 247, 247) 100%);  
+    padding:0.9rem;
+    box-shadow: -1px 1px 2px rgba(255, 255, 255, 0.904);
+
+}
+
+.circle__game--black{
+
+    background: radial-gradient(circle at 65% 15%, 
+    white 1px, 
+    rgb(0, 0, 0) 10%, 
+    rgba(0, 0, 0, 0.479) 60%, 
+    rgb(0, 0, 0) 100%);  
+    padding:0.9rem;
+    box-shadow: -1px 1px 2px rgba(255, 255, 255, 0.904);
+
+}

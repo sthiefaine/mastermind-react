@@ -1,0 +1,361 @@
+.app {
+    text-align: center;
+    background-color: #2D2D2D;
+    color: rgba(255, 255, 255, 0.96);
+    
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 600px) {
+    .app {
+        flex-direction: row;
+    }
+}
+
+.header {
+    background: rgb(27, 27, 27);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media only screen and (min-width: 600px) {
+    .header {
+
+    flex-direction: column;
+
+    }
+}
+
+.logo {
+
+    background: rgb(135, 57, 249);
+
+    height: 60px;
+    width: 60px;
+
+    margin: 10px;
+
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    .nav {
+        flex-direction: column;
+        width: 8rem;
+    }
+}
+
+.navbt {
+
+    height: 3.2rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;   
+    padding: 1rem;
+    margin: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.green {
+ background-color: rgb(36, 153, 0);
+}
+
+.red {
+  background-color: rgb(255, 79, 79);
+}
+
+
+.cor {
+
+
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container2 {
+
+
+    min-width: 120px;
+    max-width: 540px;
+
+    max-height: 53vh;
+
+
+
+    padding: 1rem;
+    margin-bottom: 3rem;
+
+    border-radius: 1rem;
+    background: rgb(27, 27, 27);
+    color: rgba(255, 255, 255, 0.96);
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+
+.mastermind2 {
+
+    height: 3.2rem;
+    background-color: #1B1B1B;
+    border-radius: 12px;   
+    padding: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0.6rem 0;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mastermind3{
+
+    height: 3.2rem;
+    border-radius: 12px;   
+    padding: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.solution2 {
+    position: absolute;
+    bottom: 1.2rem;
+}
+
+.closePalette {
+    position: absolute;
+    background: rgba(255, 0, 0, 0.747);
+    border-radius: 50%;
+    right: -0.5rem;
+    top: -0.5rem;
+
+    padding: 0.4rem;
+
+    cursor: pointer;
+}
+
+.colorsPalette2 {
+
+    background: rgba(255, 255, 255, 0.753);
+    border-radius: 12px;
+    padding: 10px;
+
+    margin-bottom: 0.5rem;
+
+
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+
+    justify-content: center;
+}
+
+.play2{
+    background-color: rgb(135, 57, 249);
+}
+
+.st2 {
+    background-color: rgb(135, 57, 249);
+}
+
+.winmaster {
+    background-color: rgb(0, 170, 242);
+}
+
+.sd2 {
+ background-color: rgb(45, 45, 45);
+}
+
+.sr {
+  background-color: rgb(45, 45, 45);
+ }
+
+.submit_game_button {
+    animation: shake 3s ease-in-out;
+    cursor: pointer;
+
+
+}
+
+@keyframes shake {
+    0% {
+        transform: translateY(0);
+      }
+      25% {
+        transform: translateY(-4px)
+      }
+      50% {
+        transform: translateY(0px)
+      }
+      75% {
+        transform: translateY(-4px)
+      }
+      100% {
+        transform: translateY(0px)
+      }
+  }
+
+  .mastermind__template {
+   
+    width: 100%;
+    height: 3.2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    background-color: #1B1B1B;
+    border-radius: 5px;
+
+   
+    padding: 1rem;
+    border-radius: 1rem;
+
+  
+  }
+
+  .mastermind__primary {
+
+    background-color: rgb(135, 57, 249);
+    margin-top: 90vw;
+  }
+
+  .mastermind__second {
+
+    background-color: rgb(45, 45, 45);
+  }
+  
+  .mastermind__left {
+
+    margin-left: 1rem;
+  }
+  
+  .mastermind__right {
+    margin: 1rem;
+    
+    width: 2.9rem;
+    min-width: 2.9rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-row-gap: 2px;
+    grid-column-gap: 2px;
+
+    justify-content: center;
+  }
+  
+  .mastermind__center {
+    position: relative;
+    width: 70%;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+  
+  }
+
+  .tapicon {
+    position: absolute;
+    top: -1.3rem;
+    left: 0.1px;
+    z-index: 20;
+    transform: rotate(-145deg);
+    animation: tape 2s;
+  }
+
+  @keyframes tape {
+    0% {
+        transform: rotate(-145deg) scale(0);
+      }
+      25% {
+        transform: rotate(-145deg) scale(0.5)
+      }
+      50% {
+        transform: rotate(-145deg) scale(1)
+      }
+      75% {
+        transform: rotate(-145deg) scale(0.8)
+      }
+      100% {
+        transform: rotate(-145deg) scale(1)
+      }
+  }
+  
+  .circle {
+    margin: 0rem 0.2rem;
+  
+    background: #646161fa;
+    box-shadow: inset 6px 6px 6px #272323, 
+                inset -6px -12px 12px #6e6e6e;
+  
+  
+    border-radius: 50%;
+    padding: 0.9rem;
+  }
+
+  
+  .circle__game { 
+    cursor: pointer;
+  
+  }
+
+  .circle__help {
+
+    padding: 0.4rem;
+    margin: 0.1rem;
+    
+  }
+
+  .circle__help--black{
+      background-color: rgb(0, 0, 0);
+      padding: 0.4rem;
+      
+      box-shadow: 0rem 0rem 0.1rem white;
+  }
+
+  .circle__help--white{
+
+      background-color: white;
+      padding:0.4rem;
+      box-shadow: 0rem 0rem 0.2rem white;
+  }
+  
+  .colorsPalette {
+
+    display: flex;
+    justify-content: space-evenly;
+
+
+    background-color:  none;
+}
