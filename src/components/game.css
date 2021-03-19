@@ -33,7 +33,9 @@ html {
 .header {
   background: rgb(27, 27, 27);
 
-  position: relative;
+  position:-webkit-sticky; 
+  position: sticky; 
+  top:0;
   height: 5rem;
   width: 100%;
 
@@ -59,8 +61,7 @@ html {
 
   height: 1.5rem;
   width: 100%;
-  position: absolute;
-  bottom: 0;
+
 
   text-align: center;
 }
