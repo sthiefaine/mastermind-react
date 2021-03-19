@@ -10,6 +10,14 @@
   background-color: rgba(0, 0, 0, 0);
   z-index: 1;
 }
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+html {
+  height: -webkit-fill-available;
+}
+
 
 #root{
 
@@ -17,7 +25,8 @@
   background-color: #2d2d2d;
   color: rgba(255, 255, 255, 0.96);
   overflow: hidden;
-
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -32,7 +41,7 @@
 
 }
 .main {
-  margin-top: 5vh;
+
   width: 100%;
   flex-grow: 1;
   display: flex;
