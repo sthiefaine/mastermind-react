@@ -4,18 +4,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+
 * {
   line-height: 1;
   box-sizing: border-box;
 }
 
-html,
-body,
 #root {
-  height: 100vh;
+
   min-width: 300px;
-  overflow: hidden;
 }
+
+
 
 input,
 button,

@@ -144,7 +144,7 @@ function RowPlayer() {
         )}
         {userWinValue !== true && previousPlayValue?.length >= triesValue && (
           <div onClick={() => onClickCleanGame()} className="mastermind3 red">
-            {"Recommancer"}
+            {"Recommencer"}
           </div>
         )}
 
