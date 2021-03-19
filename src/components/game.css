@@ -22,11 +22,11 @@ html {
 #root{
 
   min-height: 100vh;
+  width: 100%;
   background-color: #2d2d2d;
   color: rgba(255, 255, 255, 0.96);
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+
 }
 
 
@@ -43,9 +43,9 @@ html {
 
 }
 .main {
-
+  
   width: 100%;
-  flex-grow: 1;
+  height: calc(100vh - 6.5rem);
   display: flex;
   flex-direction: column;
 
