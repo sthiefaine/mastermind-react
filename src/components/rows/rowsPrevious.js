@@ -31,7 +31,7 @@ function RowsPrevious() {
   }, [previousPlayValue]);
 
   return (
-    <CustomScroller className="container2">
+    <CustomScroller className="container">
       {previousPlayValue.map(function (ku, index) {
 
         return (
@@ -47,7 +47,7 @@ function RowsPrevious() {
               name={previousPlayValue.length - 1 === index ? "test" : ""}
               key={ku.id}
               className={
-                "mastermind2 " +
+                "mastermind " +
                 (previousPlayValue.length - 1 === index ? "st2" : "sd2") +
                 (userWinValue === true ? " winmaster" : "")
               }
@@ -72,7 +72,7 @@ function RowsPrevious() {
       })}
 
       {userWinValue !== true && previousPlayValue?.length >= triesValue && (
-        <div className="mastermind3 red">
+        <div className="mastermind2 red">
           <div className="mastermind__left"></div>
           <div className="mastermind__center">
             {solutionValue.map(function (color, index) {

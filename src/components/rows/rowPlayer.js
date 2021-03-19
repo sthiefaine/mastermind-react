@@ -143,18 +143,18 @@ function RowPlayer() {
         transformType="translate"
       >
         {userWinValue === true && previousPlayValue?.length <= triesValue && (
-          <div onClick={() => onClickCleanGame()} className="mastermind3 green elev">
+          <div onClick={() => onClickCleanGame()} className="mastermindPlayer green">
             {"Rejouer"}
           </div>
         )}
         {userWinValue !== true && previousPlayValue?.length >= triesValue && (
-          <div onClick={() => onClickCleanGame()} className="mastermind3 red elev">
+          <div onClick={() => onClickCleanGame()} className="mastermindPlayer red">
             {"Recommencer"}
           </div>
         )}
 
         {userWinValue !== true && previousPlayValue?.length < triesValue && (
-          <div className="mastermind3 play2">
+          <div className="mastermindPlayer play2">
             <div class="mastermind__left">{previousPlayValue.length + 1}</div>
 
             <div class="mastermind__center">
