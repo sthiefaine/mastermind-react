@@ -75,9 +75,9 @@ function Game() {
   return (
     <>
       
-      <Firework />
+      
       <div className="main">
-
+      <Firework />
         {previousPlayValue.length !== 0 && 
         <RowsPrevious />}
 

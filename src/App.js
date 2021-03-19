@@ -22,7 +22,7 @@ function App() {
   }, [])
 
   return (
-    <div className="app">
+<>
  
       <Header />
       <Switch>
@@ -37,7 +37,7 @@ function App() {
         </Route>
       </Switch>
       <footer className="footer">Mastermind in React - @dev_Thief</footer>
-    </div>
+    </>
   );
 }
 
