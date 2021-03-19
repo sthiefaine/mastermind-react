@@ -21,7 +21,7 @@ function Home() {
   const [paramButton, setparamButton] = useState("Paramètres");
 
   return (
-    <div className="cor">
+    <div className="main">
       {previousPlayValue.length > 0 && (
         <div className="flex-row">
           <Link to="/game" className="link-button">

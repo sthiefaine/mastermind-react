@@ -11,35 +11,42 @@
   z-index: 1;
 }
 .app {
-  min-height: -webkit-fill-available;
   min-width: 300px;
   height: 100vh;
   background-color: #2d2d2d;
   color: rgba(255, 255, 255, 0.96);
+  min-height: -webkit-fill-available;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
 
-@media only screen and (min-width: 600px) {
-  .app {
-    flex-direction: row;
-  }
-}
 
 .header {
   background: rgb(27, 27, 27);
 
+  width: 100%;
   display: flex;
-  flex-direction: row;
+
+}
+.main {
+  width: 100%;
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
   align-items: center;
 }
 
-@media only screen and (min-width: 600px) {
-  .header {
-    flex-direction: column;
-  }
+.footer {
+  background: rgb(27, 27, 27);
+
+  width: 100%;
+
+  text-align: center;
 }
+
 
 .logo {
   background: rgb(135, 57, 249);
@@ -63,12 +70,7 @@
   width: 100%;
 }
 
-@media only screen and (min-width: 600px) {
-  .nav {
-    flex-direction: column;
-    width: 8rem;
-  }
-}
+
 
 .navbt {
   height: 3.2rem;
@@ -138,7 +140,9 @@
 }
 
 .mastermind3 {
-  height: 3.4rem;
+  z-index: 20;
+
+  height: 4rem;
   border-radius: 12px;
   padding: 1rem;
 
@@ -148,8 +152,13 @@
 }
 
 .solution2 {
+  z-index: 42;
   position: absolute;
-  bottom: 1.2rem;
+  bottom: 2rem;
+
+  min-width: 300px;
+  max-width: 300px;
+  width: 50%;
 }
 
 .closePalette {
@@ -166,6 +175,7 @@
 
 .colorsPalette2 {
   background: rgba(255, 255, 255, 0.753);
+
   border-radius: 12px;
   padding: 10px;
 
@@ -318,11 +328,13 @@
   margin: 0.1rem;
 
   box-shadow: inset 2px 2px 2px #272323, inset -12px -12px 4px #b8b8b8fa;
+  display: none;
 }
 
 .circle__help--black {
   background: black;
   padding: 0.4rem;
+  display: block;
 
   box-shadow: 0rem 0rem 0.1rem white;
 }
@@ -331,6 +343,7 @@
   background-color: white;
   padding: 0.4rem;
   box-shadow: 0rem 0rem 0.2rem white;
+  display: block;
 }
 
 .colorsPalette {

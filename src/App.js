@@ -36,6 +36,7 @@ function App() {
           <Home />
         </Route>
       </Switch>
+      <footer className="footer">Mastermind in React - @dev_Thief</footer>
     </div>
   );
 }
