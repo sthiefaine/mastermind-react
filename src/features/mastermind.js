@@ -55,7 +55,7 @@ export const mastermindSlice = createSlice({
     },
 
     colorPalette: (state, action) => {
-      console.log(action.payload, "tutu");
+
       state.colorPalette =
         action.payload === true ? action.payload : !state.colorPalette;
     },

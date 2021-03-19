@@ -1,26 +1,30 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
-import "./game.css";
-import "./circlesColors.css";
+import "../components/game.css";
+import "../components/circlesColors.css";
 
 import { useSelector, useDispatch } from "react-redux";
 
-import {
-  jeuModel,
-  solution,
-} from "../features/mastermind";
+import { jeuModel, solution } from "../features/mastermind";
 
-import RowPlayer from "./rowPlayer";
-import ColorsPalette from "./colorsPalette";
-import RowsPrevious from "./rowsPrevious";
+import RowPlayer from "../components/rows/rowPlayer";
+import ColorsPalette from "../components/colorsPalette";
+import RowsPrevious from "../components/rows/rowsPrevious";
+import Firework from "../components/fireworks";
 
 function Game() {
   const dispatch = useDispatch();
 
-  const previousPlayValue = useSelector(state => state.mastermind.previousPlay);
-  const resetSolutionValue = useSelector(state => state.mastermind.resetSolution);
-  const colorPaletteValue = useSelector(state => state.mastermind.colorPalette);
-  const possibilities = useSelector(state => state.mastermind.possibilities);
+  const previousPlayValue = useSelector(
+    (state) => state.mastermind.previousPlay
+  );
+  const resetSolutionValue = useSelector(
+    (state) => state.mastermind.resetSolution
+  );
+  const colorPaletteValue = useSelector(
+    (state) => state.mastermind.colorPalette
+  );
+  const possibilities = useSelector((state) => state.mastermind.possibilities);
 
   const colors = [
     "red",
@@ -70,11 +74,15 @@ function Game() {
 
   return (
     <>
+      <Firework />
+
       <div className="cor">
-        {previousPlayValue.length !== 0 && <RowsPrevious />}
+        {previousPlayValue.length !== 0 && 
+        <RowsPrevious />}
 
         <div className="solution2">
-          {colorPaletteValue === true && <ColorsPalette colors={colors} />}
+          {colorPaletteValue === true && 
+          <ColorsPalette colors={colors} />}
           <RowPlayer />
         </div>
       </div>

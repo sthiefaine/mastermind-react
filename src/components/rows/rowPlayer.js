@@ -8,12 +8,18 @@ import {
   colorPalette,
   userClick,
   cleanGame,
-} from "../features/mastermind";
+} from "../../features/mastermind";
 
-import { setTimerOn, resetTimer, stopTimer } from "../features/timer";
+import { 
+  setTimerOn, 
+  resetTimer, 
+  stopTimer } from "../../features/timer";
 
-import { ArrowIcon, FingerClickIcon } from "../app/iconsSVG";
-import { Fade } from "../animations/fade";
+import { ArrowIcon, 
+  FingerClickIcon 
+} from "../../app/iconsSVG";
+
+import { Fade } from "../../animations/fade";
 
 function RowPlayer() {
   const dispatch = useDispatch();
@@ -34,7 +40,6 @@ function RowPlayer() {
   const timerValue = useSelector((state) => state.timer.timerTime);
 
   const displayColors = (i) => {
-    console.log("displayColors", i);
 
     if (userClickValue !== i) {
       dispatch(colorPalette(true));

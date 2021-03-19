@@ -1,8 +1,10 @@
 import { useEffect} from 'react';
 
-import Home from './components/home';
-import Game from './components/game';
-import Header from './components/header';
+import Home from './pages/home';
+import Game from './pages/game';
+
+
+import Header from './components/header/header';
 
 import './App.css';
 
@@ -20,7 +22,8 @@ function App() {
   }, [])
 
   return (
-    <div className="app">  
+    <div className="app">
+ 
       <Header />
       <Switch>
         <Route exact path="/">

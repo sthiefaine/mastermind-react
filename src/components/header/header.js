@@ -4,11 +4,11 @@ import { Link, useLocation } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
 
-import { startTimer, tick } from "../features/timer";
+import { startTimer, tick, stopTimer } from "../../features/timer";
 
-import { Fade } from "../animations/fade";
+import { Fade } from "../../animations/fade";
 
-import { LetterMIcon } from "../app/iconsSVG";
+import { LetterMIcon } from "../../app/iconsSVG";
 function Header() {
   const location = useLocation();
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ function Header() {
     (state) => state.mastermind.previousPlay
   );
 
-  const triesValue = useSelector((state) => state.mastermind.possibilities);
+  const triesValue = useSelector((state) => state.mastermind.tries);
   const userWinValue = useSelector((state) => state.mastermind.userWin);
 
   const timerValue = useSelector((state) => state.timer.timerTime);
@@ -26,9 +26,24 @@ function Header() {
   const timerRef = useRef(null);
 
   useEffect(() => {
+    if(previousPlayValue.length === triesValue) {
+      dispatch(stopTimer());
+    }
+
+  }, [previousPlayValue])
+
+  useEffect(() => {
+
     if (
-      (previousPlayValue.length > 0 && location.pathname === "/game") ||
-      (location.pathname === "/game" && timerIsOn === true)
+      previousPlayValue.length < triesValue && (
+
+        (previousPlayValue.length > 0 && 
+          location.pathname === "/game" && 
+          timerIsOn === true)||
+        (location.pathname === "/game" && 
+        timerIsOn === true)
+
+      )
     ) {
       const timerId = setInterval(() => dispatch(tick()), 1000);
 
@@ -51,6 +66,7 @@ function Header() {
   };
 
   return (
+
     <div className="header">
       <div className="logo">
         <Link to="/">

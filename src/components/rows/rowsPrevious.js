@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 import CustomScroller from "react-custom-scroller";
 
-import { Fade } from "../animations/fade";
+import { Fade } from "../../animations/fade";
 
 import Help from "./help";
 

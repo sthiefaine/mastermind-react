@@ -5087,6 +5087,11 @@ find-up@^3.0.0:
   dependencies:
     locate-path "^3.0.0"
 
+fireworks-js@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/fireworks-js/-/fireworks-js-1.0.4.tgz#b76d47ddce2240009cd32264136d28541059764b"
+  integrity sha512-2LH7e/7CZz/ZW/ip4yrTpi01t5lOPDt4IkhpLiof5eghIt0+ip/L1npzz2Iwb2EXlF+/vkcAf2VqSIt4JDqTLQ==
+
 flat-cache@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/flat-cache/-/flat-cache-3.0.4.tgz#61b0338302b2fe9f957dcc32fc2a87f1c3048b11"
