@@ -18,35 +18,19 @@ html {
   height: -webkit-fill-available;
 }
 
-
-#root{
-  position: fixed;  
-  height: 100%;
-  height: -webkit-fill-available;
-  width: 100%;
-  background-color: #2d2d2d;
-  color: rgba(255, 255, 255, 0.96);
-  overflow: hidden;
-  display: flex;
- flex-direction: column;
-}
-
-
 .header {
   background: rgb(27, 27, 27);
 
-  position:-webkit-sticky; 
-  position: sticky; 
-  top:0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   height: 5rem;
   width: 100%;
 
   display: flex;
   z-index: 2;
-
 }
 .main {
-  
   width: 100%;
   flex-grow: 1;
   display: flex;
@@ -54,8 +38,6 @@ html {
 
   justify-content: center;
   align-items: center;
-
-
 }
 
 .footer {
@@ -65,10 +47,8 @@ html {
   height: 1.5rem;
   width: 100%;
 
-
   text-align: center;
 }
-
 
 .logo {
   background: rgb(135, 57, 249);
@@ -92,13 +72,11 @@ html {
   width: 100%;
 }
 
-
-
 .navbt {
-  height: 3.2rem;
+  height: 3rem;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 12px;
-  padding: 1rem;
+  padding: 0.6rem;
   margin: 10px;
 
   display: flex;
@@ -115,7 +93,6 @@ html {
 .red {
   background-color: rgb(255, 79, 79);
 }
-
 
 .container {
   min-width: 120px;
@@ -298,8 +275,8 @@ html {
 
 .tapicon {
   position: absolute;
-  top: -1.3rem;
-  left: 0.1px;
+  top: -1.4rem;
+  left: 0.4px;
   z-index: 20;
   transform: rotate(-145deg);
   animation: tape 2s;

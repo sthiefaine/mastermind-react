@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
 
 // reducers List
-import timer from "../features/timer";
-import mastermind from "../features/mastermind";
+import timer from "./slices/timer";
+import mastermind from "./slices/mastermind";
 
 // Pass in Redux store's state to save it to the user's browser local storage
 const saveStorageData = (state) => {

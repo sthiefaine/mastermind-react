@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 
-import { jeu, colorPalette } from "../features/mastermind";
+import { jeu, colorPalette } from "../redux/slices/mastermind";
 
 function ColorsPalette({ colors }) {
   const dispatch = useDispatch();

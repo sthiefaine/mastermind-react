@@ -1,8 +1,6 @@
 import { memo } from "react";
 import { useSelector } from "react-redux";
 
-import { Fade } from "../../animations/fade";
-
 function Help({ sol, bypass = false, display = false }) {
   console.log("rerendering Help");
   let helpRandomValue = useSelector(

@@ -5,7 +5,7 @@ import "../components/circlesColors.css";
 
 import { useSelector, useDispatch } from "react-redux";
 
-import { jeuModel, solution } from "../features/mastermind";
+import { jeuModel, solution } from "../redux/slices/mastermind";
 
 import RowPlayer from "../components/rows/rowPlayer";
 import ColorsPalette from "../components/colorsPalette";

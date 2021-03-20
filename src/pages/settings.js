@@ -6,13 +6,13 @@ import "../components/circlesColors.css";
 
 import { useSelector, useDispatch } from "react-redux";
 
-import { jeuModel, cleanGame } from "../features/mastermind";
-import { resetTimer } from "../features/timer";
+import { jeuModel, cleanGame } from "../redux/slices/mastermind";
+import { resetTimer } from "../redux/slices/timer";
 
 import {
   incrementPossibilities,
   decrementPossibilities,
-} from "../features/mastermind";
+} from "../redux/slices/mastermind";
 
 import Help from "../components/rows/help";
 

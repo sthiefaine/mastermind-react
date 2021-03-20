@@ -8,11 +8,11 @@ import {
   colorPalette,
   userClick,
   cleanGame,
-} from "../../features/mastermind";
+} from "../../redux/slices/mastermind";
 
-import { setTimerOn, resetTimer, stopTimer } from "../../features/timer";
+import { setTimerOn, resetTimer, stopTimer } from "../../redux/slices/timer";
 
-import { ArrowIcon, FingerClickIcon } from "../../app/iconsSVG";
+import { ArrowIcon, FingerClickIcon } from "../../utils/icons";
 
 import { Fade } from "../../animations/fade";
 

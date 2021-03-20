@@ -3,9 +3,9 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { Link } from "react-router-dom";
 
-import { cleanGame } from "../features/mastermind";
+import { cleanGame } from "../redux/slices/mastermind";
 
-import { resetTimer } from "../features/timer";
+import { resetTimer } from "../redux/slices/timer";
 
 function Home() {
   const dispatch = useDispatch();

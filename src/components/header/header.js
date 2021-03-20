@@ -4,11 +4,12 @@ import { Link, useLocation } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
 
-import { startTimer, tick, stopTimer } from "../../features/timer";
+import { startTimer, tick, stopTimer } from "../../redux/slices/timer";
 
 import { Fade } from "../../animations/fade";
+import ThemeSelector from "../themes";
+import { LetterMIcon } from "../../utils/icons";
 
-import { LetterMIcon } from "../../app/iconsSVG";
 function Header() {
   const location = useLocation();
   const dispatch = useDispatch();
@@ -93,6 +94,8 @@ function Header() {
             </Fade>
           </>
         )}
+
+        <ThemeSelector />
       </div>
     </div>
   );

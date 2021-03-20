@@ -1,23 +1,23 @@
 .header__logo {
   height: 80px;
   width: 80px;
-    flex: 0 1 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px 1rem;
-    background: rgb(135, 57, 249);
-    box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px;
+  flex: 0 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 1rem;
+  background: rgb(135, 57, 249);
+  box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px;
 }
 
 .header__title {
   flex: 0 1 auto;
-    display: flex;
-    flex-direction: row;
-    -webkit-box-align: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
 
-    padding: 2px 1.5rem 0px 0.5rem;
+  padding: 2px 1.5rem 0px 0.5rem;
 }
 
 .home_area {
@@ -32,11 +32,9 @@
   border-radius: 1rem;
   background: rgb(27, 27, 27);
   color: rgba(255, 255, 255, 0.96);
-
 }
 
 .link-button {
-
   min-width: 140px;
   max-width: 540px;
   width: 90%;
@@ -44,10 +42,9 @@
   margin: 1rem;
   padding: 1rem;
   border-radius: 1rem;
-  background: #8739F9;
+  background: #8739f9;
   color: white;
 
   display: flex;
   justify-content: center;
-
 }
