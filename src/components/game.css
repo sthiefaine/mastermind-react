@@ -22,12 +22,13 @@ html {
 #root{
   position: fixed;  
   height: 100%;
+  height: -webkit-fill-available;
   width: 100%;
   background-color: #2d2d2d;
   color: rgba(255, 255, 255, 0.96);
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+ display: flex;
+ flex-direction: column;
 }
 
 
