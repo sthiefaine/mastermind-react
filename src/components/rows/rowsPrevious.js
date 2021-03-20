@@ -1,8 +1,6 @@
 import { useEffect, useRef, memo } from "react";
 import { useSelector } from "react-redux";
 
-import CustomScroller from "react-custom-scroller";
-
 import { Fade } from "../../animations/fade";
 
 import Help from "./help";
@@ -28,7 +26,7 @@ function RowsPrevious() {
   }, [previousPlayValue]);
 
   return (
-    <CustomScroller className="container">
+    <>
       {previousPlayValue.map(function (ku, index) {
         return (
           <Fade
@@ -81,7 +79,7 @@ function RowsPrevious() {
           <div className="mastermind__right"></div>
         </div>
       )}
-    </CustomScroller>
+    </>
   );
 }
 

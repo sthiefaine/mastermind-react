@@ -10,6 +10,8 @@ import { Fade } from "../../animations/fade";
 import ThemeSelector from "../themes";
 import { LetterMIcon } from "../../utils/icons";
 
+// Styles
+import { HeaderStyled } from "../../styles/headerStyled";
 function Header() {
   const location = useLocation();
   const dispatch = useDispatch();
@@ -60,7 +62,7 @@ function Header() {
   };
 
   return (
-    <div className="header">
+    <HeaderStyled>
       <div className="logo">
         <Link to="/">
           <LetterMIcon />
@@ -94,10 +96,9 @@ function Header() {
             </Fade>
           </>
         )}
-
-        <ThemeSelector />
       </div>
-    </div>
+      <ThemeSelector />
+    </HeaderStyled>
   );
 }
 

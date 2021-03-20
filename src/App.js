@@ -4,8 +4,8 @@ import Home from "./pages/home";
 import Game from "./pages/game";
 import Settings from "./pages/settings";
 
-import Header from "./components/header/header";
-
+import Header from "./components/header";
+import Footer from "./components/footer";
 import Wrapper from "./styles/Wrapper";
 
 import "./App.css";
@@ -31,7 +31,7 @@ function App() {
           <Settings />
         </Route>
       </Switch>
-      <footer className="footer">Mastermind in React - @dev_thief</footer>
+      <Footer />
     </Wrapper>
   );
 }

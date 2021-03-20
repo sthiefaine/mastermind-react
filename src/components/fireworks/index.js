@@ -8,6 +8,7 @@ function Firework() {
   const fireworkContainerRef = useRef(null);
 
   const userWinValue = useSelector((state) => state.mastermind.userWin);
+
   useEffect(() => {
     if (userWinValue) {
       const container = fireworkContainerRef.current;

@@ -18,18 +18,6 @@ html {
   height: -webkit-fill-available;
 }
 
-.header {
-  background: rgb(27, 27, 27);
-
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  height: 5rem;
-  width: 100%;
-
-  display: flex;
-  z-index: 2;
-}
 .main {
   width: 100%;
   flex-grow: 1;
@@ -38,16 +26,6 @@ html {
 
   justify-content: center;
   align-items: center;
-}
-
-.footer {
-  color: #fff;
-  background: rgb(27, 27, 27);
-
-  height: 1.5rem;
-  width: 100%;
-
-  text-align: center;
 }
 
 .logo {
@@ -92,24 +70,6 @@ html {
 
 .red {
   background-color: rgb(255, 79, 79);
-}
-
-.container {
-  min-width: 120px;
-  max-width: 540px;
-
-  max-height: 53vh;
-
-  padding: 1rem;
-  margin-bottom: 3rem;
-
-  border-radius: 1rem;
-  background: rgb(27, 27, 27);
-  color: rgba(255, 255, 255, 0.96);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .mastermind {

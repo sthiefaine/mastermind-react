@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-
+import CustomScroller from "react-custom-scroller";
 import "../components/game.css";
 import "../components/circlesColors.css";
 
@@ -12,6 +12,7 @@ import ColorsPalette from "../components/colorsPalette";
 import RowsPrevious from "../components/rows/rowsPrevious";
 import Firework from "../components/fireworks";
 
+import { ContainerStyled } from "../styles/containerStyled";
 function Game() {
   const dispatch = useDispatch();
 
@@ -74,7 +75,13 @@ function Game() {
     <>
       <div className="main">
         <Firework />
-        {previousPlayValue.length > 0 && <RowsPrevious />}
+        {previousPlayValue.length > 0 && (
+          <ContainerStyled>
+            <CustomScroller>
+              <RowsPrevious />
+            </CustomScroller>
+          </ContainerStyled>
+        )}
 
         <div className="solution2">
           {colorPaletteValue === true && <ColorsPalette colors={colors} />}
