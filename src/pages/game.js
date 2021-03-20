@@ -74,7 +74,7 @@ function Game() {
     <>
       <div className="main">
         <Firework />
-        {previousPlayValue.length !== 0 && <RowsPrevious />}
+        {previousPlayValue.length > 0 && <RowsPrevious />}
 
         <div className="solution2">
           {colorPaletteValue === true && <ColorsPalette colors={colors} />}

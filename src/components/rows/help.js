@@ -1,13 +1,15 @@
-import { useState, useEffect } from "react";
-
+import { memo } from "react";
 import { useSelector } from "react-redux";
 
-function Help({ sol, bypass = false, display = false }) {
+import { Fade } from "../../animations/fade";
 
-  const helpValue = useSelector((state) => state.mastermind.help);
-  let helpRandomValue = useSelector((state) => state.mastermind.helpRandom[sol]);
-  
-  if(bypass === true){
+function Help({ sol, bypass = false, display = false }) {
+  console.log("rerendering Help");
+  let helpRandomValue = useSelector(
+    (state) => state.mastermind.helpRandom[sol]
+  );
+
+  if (bypass === true) {
     helpRandomValue = sol;
   }
   const Testt = helpRandomValue.map((value, index) => {
@@ -21,13 +23,16 @@ function Help({ sol, bypass = false, display = false }) {
       circleHelpColor = "";
     }
 
-    let helpTrue = display === true ? " help__true" : ""
+    let helpTrue = display === true ? " help__true" : "";
 
     return (
-      <div key={index} className={"circle circle__help " + circleHelpColor + helpTrue} />
+      <div
+        key={index}
+        className={"circle circle__help " + circleHelpColor + helpTrue}
+      />
     );
   });
   return <>{Testt}</>;
 }
 
-export default Help;
+export default memo(Help);

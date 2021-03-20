@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import { current } from "@reduxjs/toolkit";
+// import { current } from "@reduxjs/toolkit";
 
 export const mastermindSlice = createSlice({
   name: "mastermind",
@@ -55,7 +55,6 @@ export const mastermindSlice = createSlice({
     },
 
     colorPalette: (state, action) => {
-
       state.colorPalette =
         action.payload === true ? action.payload : !state.colorPalette;
     },
@@ -75,25 +74,20 @@ export const mastermindSlice = createSlice({
     },
 
     incrementPossibilities: (state, action) => {
-      const newPossibilities = state.possibilities + 1
-     
-      if (newPossibilities <= 6 &&
-        newPossibilities >= 3) {
-            state.possibilities = newPossibilities;
+      const newPossibilities = state.possibilities + 1;
+
+      if (newPossibilities <= 6 && newPossibilities >= 3) {
+        state.possibilities = newPossibilities;
       }
-    
     },
 
     decrementPossibilities: (state, action) => {
-      const newPossibilities = state.possibilities - 1 
-     
-      if (newPossibilities <= 6 &&
-        newPossibilities >= 3) {
-            state.possibilities = newPossibilities;
-      }
-    
-    },
+      const newPossibilities = state.possibilities - 1;
 
+      if (newPossibilities <= 6 && newPossibilities >= 3) {
+        state.possibilities = newPossibilities;
+      }
+    },
   },
 });
 
@@ -108,7 +102,7 @@ export const {
   userClick,
   cleanGame,
   decrementPossibilities,
-  incrementPossibilities
+  incrementPossibilities,
 } = mastermindSlice.actions;
 
 // The function below is called a thunk and allows us to perform async logic. It

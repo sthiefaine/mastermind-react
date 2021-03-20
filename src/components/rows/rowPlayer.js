@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import {
@@ -10,14 +10,9 @@ import {
   cleanGame,
 } from "../../features/mastermind";
 
-import { 
-  setTimerOn, 
-  resetTimer, 
-  stopTimer } from "../../features/timer";
+import { setTimerOn, resetTimer, stopTimer } from "../../features/timer";
 
-import { ArrowIcon, 
-  FingerClickIcon 
-} from "../../app/iconsSVG";
+import { ArrowIcon, FingerClickIcon } from "../../app/iconsSVG";
 
 import { Fade } from "../../animations/fade";
 
@@ -40,7 +35,6 @@ function RowPlayer() {
   const timerValue = useSelector((state) => state.timer.timerTime);
 
   const displayColors = (i) => {
-
     if (userClickValue !== i) {
       dispatch(colorPalette(true));
     } else {
@@ -94,17 +88,17 @@ function RowPlayer() {
     }
 
     const randomize = (tab) => {
-        let i, j, tmp;
-    
-        for (i = tab.length - 1; i > 0; i--) {
-          j = Math.floor(Math.random() * (i + 1));
-          tmp = tab[i];
-          tab[i] = tab[j];
-          tab[j] = tmp;
-        }
-    
-        return tab;
-      };
+      let i, j, tmp;
+
+      for (i = tab.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        tmp = tab[i];
+        tab[i] = tab[j];
+        tab[j] = tmp;
+      }
+
+      return tab;
+    };
 
     dispatch(
       help({
@@ -143,21 +137,29 @@ function RowPlayer() {
         transformType="translate"
       >
         {userWinValue === true && previousPlayValue?.length <= triesValue && (
-          <div onClick={() => onClickCleanGame()} className="mastermindPlayer green">
+          <div
+            onClick={() => onClickCleanGame()}
+            className="mastermindPlayer green"
+          >
             {"Rejouer"}
           </div>
         )}
         {userWinValue !== true && previousPlayValue?.length >= triesValue && (
-          <div onClick={() => onClickCleanGame()} className="mastermindPlayer red">
+          <div
+            onClick={() => onClickCleanGame()}
+            className="mastermindPlayer red"
+          >
             {"Recommencer"}
           </div>
         )}
 
         {userWinValue !== true && previousPlayValue?.length < triesValue && (
           <div className="mastermindPlayer play2">
-            <div class="mastermind__left">{previousPlayValue.length + 1}</div>
+            <div className="mastermind__left">
+              {previousPlayValue.length + 1}
+            </div>
 
-            <div class="mastermind__center">
+            <div className="mastermind__center">
               <Fade
                 visible={fingertap}
                 duration={100}
@@ -181,7 +183,7 @@ function RowPlayer() {
               })}
             </div>
 
-            <div class="mastermind__right">
+            <div className="mastermind__right">
               {jeuValue.filter((element) => element != null).length ===
                 possibilities && (
                 <ArrowIcon onClick={() => handleSubmitPlay()} />

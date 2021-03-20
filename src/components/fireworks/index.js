@@ -1,5 +1,5 @@
-import { useRef, useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useRef, useEffect } from "react";
+import { useSelector } from "react-redux";
 
 import { Fireworks } from "fireworks-js";
 

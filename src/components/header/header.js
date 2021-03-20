@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 import { Link, useLocation } from "react-router-dom";
 
@@ -25,24 +25,18 @@ function Header() {
   const timerRef = useRef(null);
 
   useEffect(() => {
-    if(previousPlayValue.length === triesValue) {
+    if (previousPlayValue.length === triesValue) {
       dispatch(stopTimer());
     }
-
-  }, [previousPlayValue])
+  }, [previousPlayValue]);
 
   useEffect(() => {
-
     if (
-      previousPlayValue.length < triesValue && (
-
-        (previousPlayValue.length > 0 && 
-          location.pathname === "/game" && 
-          timerIsOn === true)||
-        (location.pathname === "/game" && 
-        timerIsOn === true)
-
-      )
+      previousPlayValue.length < triesValue &&
+      ((previousPlayValue.length > 0 &&
+        location.pathname === "/game" &&
+        timerIsOn === true) ||
+        (location.pathname === "/game" && timerIsOn === true))
     ) {
       const timerId = setInterval(() => dispatch(tick()), 1000);
 
@@ -65,7 +59,6 @@ function Header() {
   };
 
   return (
-
     <div className="header">
       <div className="logo">
         <Link to="/">

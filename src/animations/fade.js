@@ -11,6 +11,7 @@ const LEAVING = 4;
  * @param {number} duration en ms
  * @param {boolean} animateEnter Anime l'arrivée de l'élément
  * @param {{opacity?: number, x?: number, y?: number, z?: number}} from
+ * @param {string} effect 'scale translate rotete'
  **/
 export function Fade({
   visible,
@@ -18,7 +19,7 @@ export function Fade({
   duration = 300,
   animateEnter = false,
   from = { opacity: 0 },
-  transformType = 'scale',
+  transformType = "scale",
 }) {
   const childRef = useRef(children);
   const [state, setState] = useState(
@@ -65,20 +66,19 @@ export function Fade({
       style.opacity = from.opacity;
     }
 
-    if (transformType === 'translate') {
-        style.transform = `translate3d(${from.x ?? 0}px, ${from.y ?? 0}px, ${
-            from.z ?? 0
-          }px)`;
-    } else if (transformType === 'rotate') {
-        style.transform = `rotate3d(${from.x ?? 0}deg, ${from.y ?? 0}deg, ${
-            from.z ?? 0
-          }deg)`;
+    if (transformType === "translate") {
+      style.transform = `translate3d(${from.x ?? 0}px, ${from.y ?? 0}px, ${
+        from.z ?? 0
+      }px)`;
+    } else if (transformType === "rotate") {
+      style.transform = `rotate3d(${from.x ?? 0}deg, ${from.y ?? 0}deg, ${
+        from.z ?? 0
+      }deg)`;
     } else {
-        style.transform = `scale3d(${from.x ?? 0}, ${from.y ?? 0}, ${
-            from.z ?? 0
-          })`;
+      style.transform = `scale3d(${from.x ?? 0}, ${from.y ?? 0}, ${
+        from.z ?? 0
+      })`;
     }
-
   }
 
   return <div style={style}>{childRef.current}</div>;

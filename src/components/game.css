@@ -27,7 +27,7 @@ html {
   background-color: #2d2d2d;
   color: rgba(255, 255, 255, 0.96);
   overflow: hidden;
- display: flex;
+  display: flex;
  flex-direction: column;
 }
 

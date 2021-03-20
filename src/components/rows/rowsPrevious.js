@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, memo } from "react";
 import { useSelector } from "react-redux";
 
 import CustomScroller from "react-custom-scroller";
@@ -8,18 +8,15 @@ import { Fade } from "../../animations/fade";
 import Help from "./help";
 
 function RowsPrevious() {
+  console.log("rerendering RowsPrevious");
   const previousPlayValue = useSelector(
     (state) => state.mastermind.previousPlay
   );
-  const helpValue = useSelector((state) => state.mastermind.help);
 
   const userWinValue = useSelector((state) => state.mastermind.userWin);
 
   const triesValue = useSelector((state) => state.mastermind.tries);
   const solutionValue = useSelector((state) => state.mastermind.solution);
-
-
- 
 
   const messagesEndRef = useRef(null);
 
@@ -33,9 +30,9 @@ function RowsPrevious() {
   return (
     <CustomScroller className="container">
       {previousPlayValue.map(function (ku, index) {
-
         return (
           <Fade
+            key={ku.id}
             visible={true}
             duration={400}
             animateEnter={true}
@@ -64,7 +61,7 @@ function RowsPrevious() {
                 })}
               </div>
               <div className="mastermind__right">
-                <Help sol={ku.id}/>
+                <Help sol={ku.id} />
               </div>
             </div>
           </Fade>
@@ -88,4 +85,4 @@ function RowsPrevious() {
   );
 }
 
-export default RowsPrevious;
+export default memo(RowsPrevious);
