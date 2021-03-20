@@ -62,8 +62,6 @@ function Game() {
 
       dispatch(solution(newSolution));
     }
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [resetSolutionValue]);
 
   useEffect(() => {
@@ -75,13 +73,11 @@ function Game() {
   return (
     <>
       <div className="main">
-      <Firework />
-        {previousPlayValue.length !== 0 && 
-        <RowsPrevious />}
+        <Firework />
+        {previousPlayValue.length !== 0 && <RowsPrevious />}
 
         <div className="solution2">
-          {colorPaletteValue === true && 
-          <ColorsPalette colors={colors} />}
+          {colorPaletteValue === true && <ColorsPalette colors={colors} />}
           <RowPlayer />
         </div>
       </div>

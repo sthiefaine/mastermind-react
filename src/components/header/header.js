@@ -18,7 +18,6 @@ function Header() {
   );
 
   const triesValue = useSelector((state) => state.mastermind.tries);
-  const userWinValue = useSelector((state) => state.mastermind.userWin);
 
   const timerValue = useSelector((state) => state.timer.timerTime);
   const timerIsOn = useSelector((state) => state.timer.timerOn);

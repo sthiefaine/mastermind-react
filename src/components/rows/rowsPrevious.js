@@ -31,7 +31,7 @@ function RowsPrevious() {
   }, [previousPlayValue]);
 
   return (
-    <CustomScroller className="container">
+    <div className="container">
       {previousPlayValue.map(function (ku, index) {
 
         return (
@@ -84,7 +84,7 @@ function RowsPrevious() {
           <div className="mastermind__right"></div>
         </div>
       )}
-    </CustomScroller>
+    </div>
   );
 }
 
