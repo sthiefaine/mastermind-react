@@ -74,8 +74,6 @@ function Game() {
 
   return (
     <>
-      
-      
       <div className="main">
       <Firework />
         {previousPlayValue.length !== 0 && 

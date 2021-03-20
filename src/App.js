@@ -2,6 +2,7 @@ import { useEffect} from 'react';
 
 import Home from './pages/home';
 import Game from './pages/game';
+import Settings from './pages/settings';
 
 
 import Header from './components/header/header';
@@ -33,10 +34,10 @@ function App() {
           <Game />
         </Route>
         <Route path="/settings">
-          <Home />
+          <Settings />
         </Route>
       </Switch>
-      <footer className="footer">Mastermind in React - @dev_Thief</footer>
+      <footer className="footer">Mastermind in React - @dev_thief</footer>
     </>
   );
 }

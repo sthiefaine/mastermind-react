@@ -41,6 +41,7 @@ html {
   width: 100%;
 
   display: flex;
+  z-index: 2;
 
 }
 .main {
@@ -80,7 +81,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 20;
+  z-index: 2;
 }
 
 .nav {
@@ -341,6 +342,10 @@ html {
 
   box-shadow: inset 2px 2px 2px #272323, inset -12px -12px 4px #b8b8b8fa;
   display: none;
+}
+
+.help__true {
+  display: block;
 }
 
 .circle__help--black {

@@ -72,7 +72,7 @@ function RowsPrevious() {
       })}
 
       {userWinValue !== true && previousPlayValue?.length >= triesValue && (
-        <div className="mastermind2 red">
+        <div className="mastermind red">
           <div className="mastermind__left"></div>
           <div className="mastermind__center">
             {solutionValue.map(function (color, index) {
