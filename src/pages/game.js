@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import CustomScroller from "react-custom-scroller";
 import "../components/game.css";
 import "../components/circlesColors.css";
 
@@ -13,6 +12,7 @@ import RowsPrevious from "../components/rows/rowsPrevious";
 import Firework from "../components/fireworks";
 
 import { ContainerStyled } from "../styles/containerStyled";
+import { Scrollbar } from "../styles/Scrollbar";
 function Game() {
   const dispatch = useDispatch();
 
@@ -77,9 +77,9 @@ function Game() {
         <Firework />
         {previousPlayValue.length > 0 && (
           <ContainerStyled>
-            <CustomScroller>
+            <Scrollbar>
               <RowsPrevious />
-            </CustomScroller>
+            </Scrollbar>
           </ContainerStyled>
         )}
 

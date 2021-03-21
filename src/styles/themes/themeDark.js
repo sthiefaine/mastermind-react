@@ -11,8 +11,10 @@ export const darkTheme = {
   primaryColor: "#17141A",
   secondaryColor: "#657786",
   accentColor: "#CA2055",
+  accentColor2: "#8739F9",
   tertiaryColor: "#CCD6DD",
   tertiaryColor2: "rgb(16, 15, 16)",
+  rowColor: "rgb(45, 45, 45)",
 
   overlay: "rgba(147, 149, 150, 0.4)",
   colorText: colorText,

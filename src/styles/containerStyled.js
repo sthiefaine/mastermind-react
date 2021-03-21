@@ -7,14 +7,16 @@ export const ContainerStyled = styled.div`
   min-width: 120px;
   max-width: 540px;
 
-  max-height: 53vh;
+  max-height: 52vh;
 
-  padding: 1rem;
+  padding: 1rem 0;
   margin-bottom: 3rem;
 
   border-radius: 1rem;
-
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  overflow-y: auto;
 `;

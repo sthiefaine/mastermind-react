@@ -13,8 +13,9 @@ export const lightTheme = {
   tertiaryColor: "#657786",
   tertiaryColor2: "rgb(255, 255, 255)",
   accentColor: "#00AAF2",
-
+  accentColor2: "#8739F9",
   overlay: "rgba(110, 118, 125, 0.4)",
+  rowColor: "rgb(227, 227, 232)",
   colorText: colorText,
   colorLabel: colorLabel,
   font: "Poppins",

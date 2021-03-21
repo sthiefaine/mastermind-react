@@ -5,6 +5,7 @@ import { Fade } from "../../animations/fade";
 
 import Help from "./help";
 
+import { RowStyled } from "../../styles/RowStyled";
 function RowsPrevious() {
   console.log("rerendering RowsPrevious");
   const previousPlayValue = useSelector(
@@ -37,14 +38,15 @@ function RowsPrevious() {
             from={{ opacity: 0, x: 1 }}
             transformType="scale"
           >
-            <div
+            <RowStyled
               ref={messagesEndRef}
               name={previousPlayValue.length - 1 === index ? "test" : ""}
               key={ku.id}
               className={
-                "mastermind " +
                 (previousPlayValue.length - 1 === index ? "st2" : "sd2") +
-                (userWinValue === true ? " winmaster" : "")
+                (userWinValue === true && previousPlayValue.length - 1 === index
+                  ? " winmaster"
+                  : "")
               }
             >
               <div className="mastermind__left">{ku.id + 1}</div>
@@ -61,13 +63,13 @@ function RowsPrevious() {
               <div className="mastermind__right">
                 <Help sol={ku.id} />
               </div>
-            </div>
+            </RowStyled>
           </Fade>
         );
       })}
 
       {userWinValue !== true && previousPlayValue?.length >= triesValue && (
-        <div className="mastermind red">
+        <RowStyled className="red">
           <div className="mastermind__left"></div>
           <div className="mastermind__center">
             {solutionValue.map(function (color, index) {
@@ -77,7 +79,7 @@ function RowsPrevious() {
             })}
           </div>
           <div className="mastermind__right"></div>
-        </div>
+        </RowStyled>
       )}
     </>
   );

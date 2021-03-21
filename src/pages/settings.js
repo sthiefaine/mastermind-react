@@ -16,6 +16,8 @@ import {
 
 import Help from "../components/rows/help";
 
+import { RowStyled } from "../styles/RowStyled";
+
 function Settings() {
   const dispatch = useDispatch();
 
@@ -90,7 +92,7 @@ function Settings() {
               -
             </button>
           </div>
-          <div className="mastermind play2">
+          <RowStyled className="mastermind play2">
             <div className="mastermind__left"></div>
             <div className="mastermind__center">
               {jeuModelValue.map(function (_, index) {
@@ -107,7 +109,7 @@ function Settings() {
                 <Help sol={jeuModelValue} display={true} bypass={true} />
               )}
             </div>
-          </div>
+          </RowStyled>
         </div>
       </div>
     </>
