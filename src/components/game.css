@@ -72,9 +72,6 @@ html {
   background-color: rgb(255, 79, 79);
 }
 
-.mastermind {
-}
-
 .flex-row {
   display: flex;
   justify-content: space-between;

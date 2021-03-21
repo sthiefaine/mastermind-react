@@ -8,7 +8,7 @@ import { startTimer, tick, stopTimer } from "../../redux/slices/timer";
 
 import { Fade } from "../../animations/fade";
 import ThemeSelector from "../themes";
-import { LetterMIcon } from "../../utils/icons";
+import { LetterMIcon, ReturnIcon } from "../../utils/icons";
 
 // Styles
 import { HeaderStyled } from "../../styles/headerStyled";
@@ -65,7 +65,12 @@ function Header() {
     <HeaderStyled>
       <div className="logo">
         <Link to="/">
-          <LetterMIcon />
+          {location.pathname !== "/game" && <LetterMIcon />}
+          {location.pathname === "/game" && (
+            <div className="button-icon">
+              <ReturnIcon />
+            </div>
+          )}
         </Link>
       </div>
 

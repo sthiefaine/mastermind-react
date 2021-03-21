@@ -13,6 +13,7 @@ import Firework from "../components/fireworks";
 
 import { ContainerStyled } from "../styles/containerStyled";
 import { Scrollbar } from "../styles/Scrollbar";
+
 function Game() {
   const dispatch = useDispatch();
 

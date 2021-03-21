@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import { Link } from "react-router-dom";
@@ -6,7 +5,13 @@ import { Link } from "react-router-dom";
 import { cleanGame } from "../redux/slices/mastermind";
 
 import { resetTimer } from "../redux/slices/timer";
-import { ReactIcon } from "../utils/icons";
+import {
+  ReactIcon,
+  PlayIcon,
+  SettingIcon,
+  PlayAgainIcon,
+} from "../utils/icons";
+
 function Home() {
   const dispatch = useDispatch();
   const previousPlayValue = useSelector(
@@ -17,8 +22,6 @@ function Home() {
     dispatch(cleanGame());
     dispatch(resetTimer());
   };
-
-  const [paramButton, setparamButton] = useState("Paramètres");
 
   return (
     <div className="main">
@@ -41,31 +44,37 @@ function Home() {
       </div>
       {previousPlayValue.length > 0 && (
         <div className="flex-row">
-          <Link to="/game" className="link-button">
-            Reprendre
+          <Link to="/game" className="link-button_min">
+            <span className="button-icon">
+              <PlayIcon />
+            </span>
           </Link>
 
           <Link
             to="/game"
-            className="link-button"
+            className="link-button_min"
             onClick={() => onClickCleanGame()}
           >
-            Recommencer
+            <span className="button-icon">
+              <PlayAgainIcon />
+            </span>
           </Link>
         </div>
       )}
 
       {previousPlayValue[0] === undefined && (
         <Link to="/game" className="link-button">
-          Jouer
+          <span className="button-icon">
+            <PlayIcon />
+          </span>
+          <span className="button-text">Jouer</span>
         </Link>
       )}
-      <Link
-        to="/settings"
-        className="link-button"
-        onClick={() => setparamButton("Bientôt disponible")}
-      >
-        {paramButton}
+      <Link to="/settings" className="link-button">
+        <div className="button-icon">
+          <SettingIcon />
+        </div>
+        <div className="button-text">Paramètres</div>
       </Link>
     </div>
   );
