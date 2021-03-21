@@ -1,0 +1,40 @@
+.circle {
+  margin: 0rem 0.2rem;
+
+  background: #646161fa;
+  box-shadow: inset 6px 6px 6px #272323, inset -6px -12px 12px #6e6e6e;
+
+  border-radius: 50%;
+  padding: 0.9rem;
+}
+
+.circle__game {
+  cursor: pointer;
+}
+
+.circle__help {
+  padding: 0.4rem;
+  margin: 0.1rem;
+
+  box-shadow: inset 2px 2px 2px #272323, inset -12px -12px 4px #b8b8b8fa;
+  display: none;
+}
+
+.help__true {
+  display: block;
+}
+
+.circle__help--black {
+  background: black;
+  padding: 0.4rem;
+  display: block;
+
+  box-shadow: 0rem 0rem 0.1rem white;
+}
+
+.circle__help--white {
+  background-color: white;
+  padding: 0.4rem;
+  box-shadow: 0rem 0rem 0.2rem white;
+  display: block;
+}

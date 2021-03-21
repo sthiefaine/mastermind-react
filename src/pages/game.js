@@ -1,6 +1,4 @@
 import { useEffect } from "react";
-import "../components/game.css";
-import "../components/circlesColors.css";
 
 import { useSelector, useDispatch } from "react-redux";
 
@@ -11,9 +9,8 @@ import ColorsPalette from "../components/colorsPalette";
 import RowsPrevious from "../components/rows/rowsPrevious";
 import Firework from "../components/fireworks";
 
-import { ContainerStyled } from "../styles/containerStyled";
 import { Scrollbar } from "../styles/Scrollbar";
-
+import { ContainerStyled } from "../styles/ContainerStyled";
 function Game() {
   const dispatch = useDispatch();
 
@@ -77,7 +74,7 @@ function Game() {
       <div className="main">
         <Firework />
         {previousPlayValue.length > 0 && (
-          <ContainerStyled>
+          <ContainerStyled className="padding__top-bot">
             <Scrollbar>
               <RowsPrevious />
             </Scrollbar>

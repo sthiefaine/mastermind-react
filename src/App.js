@@ -10,6 +10,10 @@ import Wrapper from "./styles/Wrapper";
 
 import "./App.css";
 
+import "./circles.css";
+import "./game.css";
+import "./circlesColors.css";
+
 import { Switch, Route } from "react-router-dom";
 import { Fade } from "./animations/fade";
 

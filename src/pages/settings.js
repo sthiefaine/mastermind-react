@@ -1,9 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 
-import "../components/game.css";
-import "../components/circlesColors.css";
-
 import { useSelector, useDispatch } from "react-redux";
 
 import { jeuModel, cleanGame } from "../redux/slices/mastermind";
@@ -19,6 +16,8 @@ import {
 import Help from "../components/rows/help";
 
 import { RowStyled } from "../styles/RowStyled";
+
+import { ContainerStyled } from "../styles/ContainerStyled";
 
 function Settings() {
   const dispatch = useDispatch();
@@ -75,14 +74,14 @@ function Settings() {
 
   return (
     <>
-      <div className="main flex-start">
-        <div className="container2">
-          <div className="flex-row flex-space">
+      <div className="main flex__jc__space-around">
+        <ContainerStyled>
+          <div className="flex-row flex__jc__space-between">
             <label className="settings-label">Choix</label>
             <div className="btns-control">
               <button
                 type="button"
-                className="link-button_min"
+                className="bt-small"
                 aria-label="Decrement Possibilities"
                 onClick={() => dispatch(decrementPossibilities())}
               >
@@ -90,7 +89,7 @@ function Settings() {
               </button>
               <button
                 type="button"
-                className="link-button_min"
+                className="bt-small"
                 aria-label="Increment Possibilities"
                 onClick={() => dispatch(incrementPossibilities())}
               >
@@ -116,24 +115,24 @@ function Settings() {
               )}
             </div>
           </RowStyled>
-        </div>
+        </ContainerStyled>
 
-        <div className="container2">
-          <div className="flex-row flex-space">
+        <ContainerStyled>
+          <div className="flex-row flex__jc__space-between">
             <label className="settings-label">Essais</label>
             <div className="flex-row">
               <button
                 type="button"
-                className="link-button_min"
+                className="bt-small"
                 aria-label="Decrement Tries"
                 onClick={() => dispatch(decrementTries())}
               >
                 -
               </button>
-              <div className="link-button_min">0/{tries}</div>
+              <div className="bt-small">0/{tries}</div>
               <button
                 type="button"
-                className="link-button_min"
+                className="bt-small"
                 aria-label="Increment Tries"
                 onClick={() => dispatch(incrementTries())}
               >
@@ -141,7 +140,7 @@ function Settings() {
               </button>
             </div>
           </div>
-        </div>
+        </ContainerStyled>
       </div>
     </>
   );

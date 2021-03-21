@@ -12,6 +12,7 @@ import { LetterMIcon, ReturnIcon } from "../../utils/icons";
 
 // Styles
 import { HeaderStyled } from "../../styles/headerStyled";
+
 function Header() {
   const location = useLocation();
   const dispatch = useDispatch();
