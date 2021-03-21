@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { cleanGame } from "../redux/slices/mastermind";
 
 import { resetTimer } from "../redux/slices/timer";
-
+import { ReactIcon } from "../utils/icons";
 function Home() {
   const dispatch = useDispatch();
   const previousPlayValue = useSelector(
@@ -22,6 +22,23 @@ function Home() {
 
   return (
     <div className="main">
+      <div className="home-logo">
+        <div className="home-letters">
+          <span>M</span>
+          <span>a</span>
+          <span>s</span>
+          <span>t</span>
+          <span>e</span>
+          <span>r</span>
+          <div className="logo-react">
+            <ReactIcon />
+          </div>
+          <span>m</span>
+          <span>i</span>
+          <span>n</span>
+          <span>d</span>
+        </div>
+      </div>
       {previousPlayValue.length > 0 && (
         <div className="flex-row">
           <Link to="/game" className="link-button">

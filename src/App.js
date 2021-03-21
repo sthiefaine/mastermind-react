@@ -11,6 +11,7 @@ import Wrapper from "./styles/Wrapper";
 import "./App.css";
 
 import { Switch, Route } from "react-router-dom";
+import { Fade } from "./animations/fade";
 
 function App() {
   useEffect(() => {
@@ -19,7 +20,16 @@ function App() {
 
   return (
     <Wrapper>
-      <Header />
+      <Fade
+        visible={true}
+        duration={600}
+        animateEnter={true}
+        from={{ opacity: 1, y: -300, x: 0 }}
+        transformType="translate"
+      >
+        <Header />
+      </Fade>
+
       <Switch>
         <Route exact path="/">
           <Home />

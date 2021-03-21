@@ -10,6 +10,123 @@
   box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px;
 }
 
+.home-logo {
+  align-items: center;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown;
+  display: flex;
+  height: 32%;
+  justify-content: center;
+  position: relative;
+  width: 92%;
+}
+
+.home-letters {
+  font-size: 2rem;
+  line-height: 0.4;
+  position: relative;
+  text-align: center;
+  text-shadow: 1px 1px 2px #755134, 5px 6px 8px rgb(0 0 0 / 55%);
+  text-transform: uppercase;
+  width: 100%;
+}
+.logo-react {
+  -webkit-animation: rotation 2s linear infinite;
+  animation: rotation 2s linear infinite;
+  font-size: 10px;
+  position: absolute;
+  right: 15%;
+  text-shadow: none;
+  text-transform: none;
+  top: -5%;
+  width: 3rem;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+.home-letters span:first-child {
+  color: rgb(255, 79, 79);
+  font-size: 90px;
+}
+
+.home-letters span:nth-child(2) {
+  color: rgb(255, 0, 0);
+  font-size: 45px;
+}
+.home-letters span:nth-child(3) {
+  color: #87cefa;
+  font-size: 32px;
+}
+.home-letters span:nth-child(4) {
+  color: rgb(0, 119, 255);
+  font-size: 48px;
+}
+.home-letters span:nth-child(5) {
+  color: #0000ff;
+  font-size: 42px;
+}
+
+.home-letters span:nth-child(6) {
+  color: #ffff00;
+}
+.home-letters span:nth-child(8) {
+  color: rgb(255, 215, 0);
+  font-size: 82px;
+}
+
+.home-letters span:nth-child(9) {
+  color: rgb(9, 255, 0);
+  font-size: 50px;
+}
+.home-letters span:nth-child(10) {
+  color: rgb(36, 153, 0);
+}
+.home-letters span:nth-child(11) {
+  color: rgb(197, 96, 255);
+  font-size: 45px;
+}
+
+@keyframes bounceInDown {
+  0%,
+  60%,
+  75%,
+  90%,
+  100% {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+  60% {
+    opacity: 0.5;
+    transform: translate3d(0, 25px, 0);
+  }
+  75% {
+    opacity: 1;
+    transform: translate3d(0, -10px, 0);
+  }
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+  100% {
+    transform: translateZ(0);
+  }
+}
+
 .header__title {
   flex: 0 1 auto;
   display: flex;
