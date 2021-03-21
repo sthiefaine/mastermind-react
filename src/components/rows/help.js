@@ -2,7 +2,6 @@ import { memo } from "react";
 import { useSelector } from "react-redux";
 
 function Help({ sol, bypass = false, display = false }) {
-  console.log("rerendering Help");
   let helpRandomValue = useSelector(
     (state) => state.mastermind.helpRandom[sol]
   );
@@ -10,7 +9,7 @@ function Help({ sol, bypass = false, display = false }) {
   if (bypass === true) {
     helpRandomValue = sol;
   }
-  const Testt = helpRandomValue.map((value, index) => {
+  const helpMap = helpRandomValue.map((value, index) => {
     let circleHelpColor = "";
 
     if (value === "wrong") {
@@ -30,7 +29,7 @@ function Help({ sol, bypass = false, display = false }) {
       />
     );
   });
-  return <>{Testt}</>;
+  return <>{helpMap}</>;
 }
 
 export default memo(Help);

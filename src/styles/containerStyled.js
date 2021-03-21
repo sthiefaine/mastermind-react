@@ -8,6 +8,7 @@ export const ContainerStyled = styled.div`
   max-width: 540px;
 
   max-height: 52vh;
+  width: 95%;
 
   padding: 1rem 0;
   margin-bottom: 3rem;

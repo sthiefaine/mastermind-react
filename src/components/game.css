@@ -72,11 +72,6 @@ html {
   background-color: rgb(255, 79, 79);
 }
 
-.flex-row {
-  display: flex;
-  justify-content: space-between;
-}
-
 .mastermindPlayer {
   z-index: 20;
 

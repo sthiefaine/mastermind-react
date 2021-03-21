@@ -7,7 +7,6 @@ import Help from "./help";
 
 import { RowStyled } from "../../styles/RowStyled";
 function RowsPrevious() {
-  console.log("rerendering RowsPrevious");
   const previousPlayValue = useSelector(
     (state) => state.mastermind.previousPlay
   );

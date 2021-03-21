@@ -12,6 +12,8 @@ import { resetTimer } from "../redux/slices/timer";
 import {
   incrementPossibilities,
   decrementPossibilities,
+  incrementTries,
+  decrementTries,
 } from "../redux/slices/mastermind";
 
 import Help from "../components/rows/help";
@@ -33,10 +35,9 @@ function Settings() {
   );
 
   const solutionValue = useSelector((state) => state.mastermind.solution);
-  const jeuValue = useSelector((state) => state.mastermind.jeu);
 
   const possibilities = useSelector((state) => state.mastermind.possibilities);
-
+  const tries = useSelector((state) => state.mastermind.tries);
   const colors = [
     "red",
     "blue",
@@ -63,34 +64,39 @@ function Settings() {
     }
   }, [possibilities]);
 
+  const [countPass, setCountPass] = useState(0);
   useEffect(() => {
-    if (possibilities !== solutionValue.length) {
+    setCountPass(countPass + 1);
+    if (countPass >= 1) {
       dispatch(cleanGame());
       dispatch(resetTimer());
     }
-  }, [possibilities]);
+  }, [possibilities, tries]);
 
   return (
     <>
-      <div className="main">
-        <div>
-          <div className="flex-row">
-            <button
-              type="button"
-              className="link-button"
-              aria-label="Increment Possibilities"
-              onClick={() => dispatch(incrementPossibilities())}
-            >
-              +
-            </button>
-            <button
-              type="button"
-              className="link-button"
-              aria-label="Decrement Possibilities"
-              onClick={() => dispatch(decrementPossibilities())}
-            >
-              -
-            </button>
+      <div className="main flex-start">
+        <div className="container2">
+          <div className="flex-row flex-space">
+            <label className="settings-label">Choix</label>
+            <div className="btns-control">
+              <button
+                type="button"
+                className="link-button_min"
+                aria-label="Decrement Possibilities"
+                onClick={() => dispatch(decrementPossibilities())}
+              >
+                -
+              </button>
+              <button
+                type="button"
+                className="link-button_min"
+                aria-label="Increment Possibilities"
+                onClick={() => dispatch(incrementPossibilities())}
+              >
+                +
+              </button>
+            </div>
           </div>
           <RowStyled className="mastermind play2">
             <div className="mastermind__left"></div>
@@ -110,6 +116,31 @@ function Settings() {
               )}
             </div>
           </RowStyled>
+        </div>
+
+        <div className="container2">
+          <div className="flex-row flex-space">
+            <label className="settings-label">Essais</label>
+            <div className="flex-row">
+              <button
+                type="button"
+                className="link-button_min"
+                aria-label="Decrement Tries"
+                onClick={() => dispatch(decrementTries())}
+              >
+                -
+              </button>
+              <div className="link-button_min">0/{tries}</div>
+              <button
+                type="button"
+                className="link-button_min"
+                aria-label="Increment Tries"
+                onClick={() => dispatch(incrementTries())}
+              >
+                +
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </>

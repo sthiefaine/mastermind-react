@@ -11,7 +11,6 @@
 }
 
 .home-logo {
-  margin-top: -20%;
   align-items: center;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -141,6 +140,7 @@
   max-width: 540px;
 
   width: 90%;
+
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
@@ -150,12 +150,61 @@
   color: rgba(255, 255, 255, 0.96);
 }
 
-.link-button {
+.home-container-button {
+  width: 100%;
+
+  margin-top: 5vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+}
+
+.container2 {
   min-width: 140px;
   max-width: 540px;
-  width: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+  margin: 1rem 0;
+}
+
+.settings-label {
+  display: block;
+  text-align: center;
+  margin-left: 1rem;
+  text-transform: uppercase;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.flex-space {
+  justify-content: space-between;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.btns-control {
+  display: flex;
+}
+.link-button {
+  min-width: 300px;
+  max-width: 400px;
+  margin: 1rem auto;
   z-index: 6;
-  margin: 1rem;
+  width: 90%;
+
   padding: 0.8rem;
   border-radius: 1rem;
   background: #8739f9;
@@ -163,8 +212,7 @@
 
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
-  align-items: baseline;
+
   font-size: 2.2rem;
 }
 
@@ -173,8 +221,8 @@
   max-width: 6rem;
   width: 4rem;
   z-index: 6;
-  margin: 1rem;
-  padding: 0.8rem;
+  margin: 0.5rem;
+  padding: 1rem;
   border-radius: 1rem;
   background: #8739f9;
   color: white;
@@ -183,14 +231,10 @@
   justify-content: center;
   flex-direction: row;
   align-items: baseline;
-  font-size: 2.2rem;
+  font-size: 1.5rem;
 }
 
 .button-icon {
   width: 2rem;
   height: 2rem;
-}
-
-.button-text {
-  display: inline-block;
 }
