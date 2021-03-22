@@ -10,6 +10,7 @@ import {
   PlayIcon,
   SettingIcon,
   PlayAgainIcon,
+  InfoIcon,
 } from "../utils/icons";
 
 import { Fade } from "../animations/fade";
@@ -99,7 +100,7 @@ function Home() {
         )}
         <Fade
           visible={true}
-          duration={1400}
+          duration={1600}
           animateEnter={true}
           from={{ opacity: 0, y: 0, x: -1000 }}
           transformType="translate"
@@ -109,6 +110,21 @@ function Home() {
               <SettingIcon />
             </div>
             <div className="button-text">Paramètres</div>
+          </Link>
+        </Fade>
+
+        <Fade
+          visible={true}
+          duration={1800}
+          animateEnter={true}
+          from={{ opacity: 0, y: 0, x: -1000 }}
+          transformType="translate"
+        >
+          <Link to="/infos" className="link-button">
+            <div className="button-icon">
+              <InfoIcon />
+            </div>
+            <div className="button-text">Informations</div>
           </Link>
         </Fade>
       </div>

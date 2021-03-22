@@ -162,7 +162,7 @@ function RowPlayer() {
             <div className="mastermind__center">
               <Fade
                 visible={fingertap}
-                duration={100}
+                duration={600}
                 animateEnter={true}
                 from={{ opacity: 0 }}
                 transformType="translation"

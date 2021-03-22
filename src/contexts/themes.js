@@ -20,7 +20,7 @@ export const ThemeProvider = ({ children }) => {
   const themeObject = themeString === "dark" ? darkTheme : lightTheme;
 
   return (
-    <ThemeContext.Provider value={{ themeString, setThemeString }}>
+    <ThemeContext.Provider value={{ themeString, setThemeString, themeObject }}>
       <BaseThemeProvider theme={themeObject}>{children}</BaseThemeProvider>
     </ThemeContext.Provider>
   );
@@ -29,7 +29,7 @@ export const ThemeProvider = ({ children }) => {
 export const useTheme = () => {
   const context = useContext(ThemeContext);
 
-  const { themeString, setThemeString } = context;
+  const { themeString, setThemeString, themeObject } = context;
 
   const toggleTheme = (value) => {
     setThemeString(value);
@@ -37,6 +37,7 @@ export const useTheme = () => {
   };
 
   return {
+    theme: themeObject,
     currentTheme: themeString,
     toggleTheme,
   };

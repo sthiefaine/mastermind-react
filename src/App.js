@@ -52,6 +52,9 @@ function App() {
         <Route path="/settings">
           <Settings />
         </Route>
+        <Route>
+          <Home />
+        </Route>
       </Switch>
       <Footer />
     </Wrapper>

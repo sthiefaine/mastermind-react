@@ -140,7 +140,7 @@ html {
 }
 
 .submit_game_button {
-  animation: shake 3s ease-in-out;
+  animation: shake 4s ease-in-out;
   cursor: pointer;
 }
 
