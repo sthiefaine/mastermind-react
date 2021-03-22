@@ -104,6 +104,11 @@ export const mastermindSlice = createSlice({
         state.tries = newTries;
       }
     },
+
+    resetSettings: (state, action) => {
+      state.tries = 10;
+      state.possibilities = 4;
+    },
   },
 });
 
@@ -121,6 +126,7 @@ export const {
   incrementPossibilities,
   decrementTries,
   incrementTries,
+  resetSettings,
 } = mastermindSlice.actions;
 
 // The function below is called a thunk and allows us to perform async logic. It

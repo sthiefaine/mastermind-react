@@ -3,9 +3,9 @@ import { useState, useContext, createContext } from "react";
 import { ThemeProvider as BaseThemeProvider } from "styled-components";
 
 // import theme
-import { lightTheme } from "../styles/themes/themeLight";
+import { lightTheme } from "../themes/themeLight";
 
-import { darkTheme } from "../styles/themes/themeDark";
+import { darkTheme } from "../themes/themeDark";
 
 // == theme context
 export const ThemeContext = createContext(null);

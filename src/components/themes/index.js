@@ -1,5 +1,6 @@
 import { useTheme } from "../../contexts/themes";
 
+import { ButtonXSStyled } from "../../styles/buttons/ButtonXSStyled";
 export default function ThemeSelector() {
   const { toggleTheme, currentTheme } = useTheme();
 
@@ -8,13 +9,12 @@ export default function ThemeSelector() {
   };
 
   return (
-    <button
+    <ButtonXSStyled
       type="button"
-      className="navbt"
       id={currentTheme === "dark" ? "light" : "dark"}
       onClick={handelOnClickChangeTheme}
     >
       {currentTheme === "dark" ? "☀️" : "🌙"}
-    </button>
+    </ButtonXSStyled>
   );
 }

@@ -11,6 +11,7 @@ import {
   decrementPossibilities,
   incrementTries,
   decrementTries,
+  resetSettings,
 } from "../redux/slices/mastermind";
 
 import Help from "../components/rows/help";
@@ -18,7 +19,11 @@ import Help from "../components/rows/help";
 import { RowStyled } from "../styles/RowStyled";
 
 import { ContainerStyled } from "../styles/ContainerStyled";
+import { ButtonXSStyled } from "../styles/buttons/ButtonXSStyled";
+import { ButtonXLStyled } from "../styles/buttons/ButtonXLStyled";
+import { SpanStyled } from "../styles/SpanStyled";
 
+import { Fade } from "../animations/fade";
 function Settings() {
   const dispatch = useDispatch();
 
@@ -72,6 +77,9 @@ function Settings() {
     }
   }, [possibilities, tries]);
 
+  const onClickResetSetting = () => {
+    return dispatch(resetSettings());
+  };
   return (
     <>
       <div className="main flex__jc__space-around">
@@ -79,26 +87,23 @@ function Settings() {
           <div className="flex-row flex__jc__space-between">
             <label className="settings-label">Choix</label>
             <div className="btns-control">
-              <button
+              <ButtonXSStyled
                 type="button"
-                className="bt-small"
                 aria-label="Decrement Possibilities"
                 onClick={() => dispatch(decrementPossibilities())}
               >
                 -
-              </button>
-              <button
+              </ButtonXSStyled>
+              <ButtonXSStyled
                 type="button"
-                className="bt-small"
                 aria-label="Increment Possibilities"
                 onClick={() => dispatch(incrementPossibilities())}
               >
                 +
-              </button>
+              </ButtonXSStyled>
             </div>
           </div>
           <RowStyled className="mastermind play2">
-            <div className="mastermind__left"></div>
             <div className="mastermind__center">
               {jeuModelValue.map(function (_, index) {
                 return (
@@ -121,26 +126,41 @@ function Settings() {
           <div className="flex-row flex__jc__space-between">
             <label className="settings-label">Essais</label>
             <div className="flex-row">
-              <button
+              <ButtonXSStyled
                 type="button"
-                className="bt-small"
                 aria-label="Decrement Tries"
                 onClick={() => dispatch(decrementTries())}
               >
                 -
-              </button>
-              <div className="bt-small">0/{tries}</div>
-              <button
+              </ButtonXSStyled>
+              <SpanStyled>0/{tries}</SpanStyled>
+              <ButtonXSStyled
                 type="button"
                 className="bt-small"
                 aria-label="Increment Tries"
                 onClick={() => dispatch(incrementTries())}
               >
                 +
-              </button>
+              </ButtonXSStyled>
             </div>
           </div>
         </ContainerStyled>
+
+        <Fade
+          visible={true}
+          duration={400}
+          animateEnter={true}
+          from={{ opacity: 0, y: 0, x: 1 }}
+          transformType="fade"
+        >
+          <ButtonXLStyled
+            type="button"
+            className="red"
+            onClick={() => onClickResetSetting()}
+          >
+            <div className="button-text">Reset Setting</div>
+          </ButtonXLStyled>
+        </Fade>
       </div>
     </>
   );

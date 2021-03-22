@@ -8,8 +8,9 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { startTimer, tick, stopTimer } from "../../redux/slices/timer";
 
+import { SpanStyled } from "../../styles/SpanStyled";
+
 function Timer() {
-  console.log("timer render");
   const location = useLocation();
   const dispatch = useDispatch();
 
@@ -57,10 +58,6 @@ function Timer() {
     return `${getHours}:${getMinutes}:${getSeconds}`;
   };
 
-  return (
-    <div ref={timerRef} className="navbt">
-      {formatTime(timerValue)}
-    </div>
-  );
+  return <SpanStyled ref={timerRef}>{formatTime(timerValue)}</SpanStyled>;
 }
 export default Timer;

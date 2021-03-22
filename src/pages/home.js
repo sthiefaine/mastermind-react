@@ -1,7 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
 
-import { Link } from "react-router-dom";
-
 import { cleanGame } from "../redux/slices/mastermind";
 
 import { resetTimer } from "../redux/slices/timer";
@@ -14,6 +12,10 @@ import {
 } from "../utils/icons";
 
 import { Fade } from "../animations/fade";
+
+import { LinkXLStyled } from "../styles/links/LinkXLStyled";
+
+import { LinkSStyled } from "../styles/links/LinkSStyled";
 
 function Home() {
   const dispatch = useDispatch();
@@ -55,11 +57,11 @@ function Home() {
               from={{ opacity: 0, y: 10, x: -1000 }}
               transformType="translate"
             >
-              <Link to="/game" className="link-button_min">
+              <LinkSStyled className="important" to="/game">
                 <span className="button-icon">
                   <PlayIcon />
                 </span>
-              </Link>
+              </LinkSStyled>
             </Fade>
 
             <Fade
@@ -69,15 +71,11 @@ function Home() {
               from={{ opacity: 0, y: 0, x: 1000 }}
               transformType="translate"
             >
-              <Link
-                to="/game"
-                className="link-button_min"
-                onClick={() => onClickCleanGame()}
-              >
+              <LinkSStyled to="/game" onClick={() => onClickCleanGame()}>
                 <span className="button-icon">
                   <PlayAgainIcon />
                 </span>
-              </Link>
+              </LinkSStyled>
             </Fade>
           </div>
         )}
@@ -90,12 +88,12 @@ function Home() {
             from={{ opacity: 0, y: 0, x: -1000 }}
             transformType="translate"
           >
-            <Link to="/game" className="link-button">
+            <LinkXLStyled to="/game">
               <span className="button-icon">
                 <PlayIcon />
               </span>
               <span className="button-text">Jouer</span>
-            </Link>
+            </LinkXLStyled>
           </Fade>
         )}
         <Fade
@@ -105,12 +103,12 @@ function Home() {
           from={{ opacity: 0, y: 0, x: -1000 }}
           transformType="translate"
         >
-          <Link to="/settings" className="link-button">
+          <LinkXLStyled to="/settings">
             <div className="button-icon">
               <SettingIcon />
             </div>
             <div className="button-text">Paramètres</div>
-          </Link>
+          </LinkXLStyled>
         </Fade>
 
         <Fade
@@ -120,12 +118,12 @@ function Home() {
           from={{ opacity: 0, y: 0, x: -1000 }}
           transformType="translate"
         >
-          <Link to="/infos" className="link-button">
+          <LinkXLStyled to="/infos" className="link-button">
             <div className="button-icon">
               <InfoIcon />
             </div>
             <div className="button-text">Informations</div>
-          </Link>
+          </LinkXLStyled>
         </Fade>
       </div>
     </div>

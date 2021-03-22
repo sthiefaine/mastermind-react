@@ -16,6 +16,11 @@ import { ArrowIcon, FingerClickIcon } from "../../utils/icons";
 
 import { Fade } from "../../animations/fade";
 
+import { RowStyled } from "../../styles/RowStyled";
+
+import { ButtonXLStyled } from "../../styles/buttons/ButtonXLStyled";
+import { PlayAgainIcon } from "../../utils/icons";
+
 function RowPlayer() {
   const dispatch = useDispatch();
 
@@ -35,6 +40,9 @@ function RowPlayer() {
   const timerValue = useSelector((state) => state.timer.timerTime);
 
   const displayColors = (i) => {
+    if (i === null) {
+      return;
+    }
     if (userClickValue !== i) {
       dispatch(colorPalette(true));
     } else {
@@ -137,24 +145,22 @@ function RowPlayer() {
         transformType="translate"
       >
         {userWinValue === true && previousPlayValue?.length <= triesValue && (
-          <div
-            onClick={() => onClickCleanGame()}
-            className="mastermindPlayer green"
-          >
-            {"Rejouer"}
-          </div>
+          <ButtonXLStyled onClick={() => onClickCleanGame()} className="green">
+            <span className="button-icon">
+              <PlayAgainIcon />
+            </span>
+          </ButtonXLStyled>
         )}
         {userWinValue !== true && previousPlayValue?.length >= triesValue && (
-          <div
-            onClick={() => onClickCleanGame()}
-            className="mastermindPlayer red"
-          >
-            {"Recommencer"}
-          </div>
+          <ButtonXLStyled onClick={() => onClickCleanGame()} className="red">
+            <span className="button-icon">
+              <PlayAgainIcon />
+            </span>
+          </ButtonXLStyled>
         )}
 
         {userWinValue !== true && previousPlayValue?.length < triesValue && (
-          <div className="mastermindPlayer play2">
+          <RowStyled className="play2 margin0">
             <div className="mastermind__left">
               {previousPlayValue.length + 1}
             </div>
@@ -189,7 +195,7 @@ function RowPlayer() {
                 <ArrowIcon onClick={() => handleSubmitPlay()} />
               )}
             </div>
-          </div>
+          </RowStyled>
         )}
       </Fade>
     </>

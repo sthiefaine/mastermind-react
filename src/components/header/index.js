@@ -8,6 +8,7 @@ import { LetterMIcon, ReturnIcon } from "../../utils/icons";
 import Timer from "../timer";
 // Styles
 import { HeaderStyled } from "../../styles/headerStyled";
+import { SpanStyled } from "../../styles/SpanStyled";
 
 function Header() {
   console.log("header render");
@@ -23,8 +24,8 @@ function Header() {
     <HeaderStyled>
       <div className="logo">
         <Link to="/">
-          {location.pathname !== "/game" && <LetterMIcon />}
-          {location.pathname === "/game" && (
+          {location.pathname === "/" && <LetterMIcon />}
+          {location.pathname !== "/" && (
             <div className="button-icon">
               <ReturnIcon />
             </div>
@@ -51,9 +52,9 @@ function Header() {
               from={{ opacity: 0, y: 10, x: 1000 }}
               transformType="translate"
             >
-              <div className="navbt">
+              <SpanStyled>
                 {(previousPlayValue?.length || 0) + " / " + triesValue}
-              </div>
+              </SpanStyled>
             </Fade>
           </>
         )}

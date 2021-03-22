@@ -30,4 +30,8 @@ export const RowStyled = styled.div`
   &.red {
     background-color: rgb(255, 79, 79);
   }
+
+  &.margin0 {
+    margin: 0rem;
+  }
 `;
