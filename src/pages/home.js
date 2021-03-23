@@ -17,6 +17,8 @@ import { LinkXLStyled } from "../styles/links/LinkXLStyled";
 
 import { LinkSStyled } from "../styles/links/LinkSStyled";
 
+import { MainStyled } from "../styles/MainStyled";
+
 function Home() {
   const dispatch = useDispatch();
   const previousPlayValue = useSelector(
@@ -29,7 +31,7 @@ function Home() {
   };
 
   return (
-    <div className="main">
+    <MainStyled>
       <div className="home-logo">
         <div className="home-letters">
           <span>M</span>
@@ -126,7 +128,7 @@ function Home() {
           </LinkXLStyled>
         </Fade>
       </div>
-    </div>
+    </MainStyled>
   );
 }
 

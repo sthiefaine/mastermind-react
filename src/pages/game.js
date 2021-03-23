@@ -11,6 +11,9 @@ import Firework from "../components/fireworks";
 
 import { Scrollbar } from "../styles/Scrollbar";
 import { ContainerStyled } from "../styles/ContainerStyled";
+
+import { MainStyled } from "../styles/MainStyled";
+
 function Game() {
   const dispatch = useDispatch();
 
@@ -71,7 +74,7 @@ function Game() {
 
   return (
     <>
-      <div className="main">
+      <MainStyled>
         <Firework />
         {previousPlayValue.length > 0 && (
           <ContainerStyled className="padding__top-bot">
@@ -85,7 +88,7 @@ function Game() {
           {colorPaletteValue === true && <ColorsPalette colors={colors} />}
           <RowPlayer />
         </div>
-      </div>
+      </MainStyled>
     </>
   );
 }

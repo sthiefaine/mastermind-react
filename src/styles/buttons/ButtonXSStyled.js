@@ -15,6 +15,11 @@ export const ButtonXSStyled = styled.button`
   align-items: baseline;
   font-size: 1.1rem;
 
+  &.icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
   &.red {
     background: red;
   }

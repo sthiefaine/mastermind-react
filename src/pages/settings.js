@@ -23,6 +23,7 @@ import { ButtonXSStyled } from "../styles/buttons/ButtonXSStyled";
 import { ButtonXLStyled } from "../styles/buttons/ButtonXLStyled";
 import { SpanStyled } from "../styles/SpanStyled";
 
+import { MainStyled } from "../styles/MainStyled";
 import { Fade } from "../animations/fade";
 function Settings() {
   const dispatch = useDispatch();
@@ -82,7 +83,7 @@ function Settings() {
   };
   return (
     <>
-      <div className="main flex__jc__space-around">
+      <MainStyled className="flex__jc__space-around">
         <ContainerStyled>
           <div className="flex-row flex__jc__space-between">
             <label className="settings-label">Choix</label>
@@ -161,7 +162,7 @@ function Settings() {
             <div className="button-text">Reset Setting</div>
           </ButtonXLStyled>
         </Fade>
-      </div>
+      </MainStyled>
     </>
   );
 }

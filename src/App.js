@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import Home from "./pages/home";
 import Game from "./pages/game";
 import Settings from "./pages/settings";
+import Infos from "./pages/infos";
 
 import Header from "./components/header";
 import Footer from "./components/footer";
@@ -52,8 +53,8 @@ function App() {
         <Route path="/settings">
           <Settings />
         </Route>
-        <Route>
-          <Home />
+        <Route path="/infos">
+          <Infos />
         </Route>
       </Switch>
       <Footer />
