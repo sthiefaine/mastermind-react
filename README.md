@@ -6,15 +6,17 @@ Just a Mastermind Game to practice react.js, redux RTK, styled-components, local
 Let's Play [Mastermind-React Online](https://mastermind-react.netlify.app/infos)
 
 ## Photos
-![plot](./git-data/mastermind-react__home.png)
 
-![plot](./git-data/mastermind-react__play-dark.png)
+<div>
+<img src="./git-data/mastermind-react__home.png" alt="Mastermind Home" style="height: 300px; width:200px;"/>
 
-![plot](./git-data/mastermind-react__play-light.png)
+<img src="./git-data/mastermind-react__settings.png" alt="Mastermind Settings" style="height: 300px; width:200px;"/>
+</div>
 
-![plot](./git-data/mastermind-react__settings.png)
-
-
+<div>
+<img src="./git-data/mastermind-react__play-dark.png" alt="Mastermind Play dark" style="height: 300px; width:200px;"/>
+<img src="./git-data/mastermind-react__play-light.png" alt="Mastermind PLay light" style="height: 300px; width:200px;"/>
+</div>
 
 ## Hosted on Netlify
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3094bf49-ae01-4186-8285-863cf50a79b3/deploy-status)](https://app.netlify.com/sites/mastermind-react/deploys)
