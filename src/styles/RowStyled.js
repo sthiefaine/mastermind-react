@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const RowStyled = styled.div`
   height: 3.4rem;
-  width: 90%;
+  width: 100%;
 
   background: ${({ theme }) => theme.rowColor};
   color: ${({ theme }) => theme.colorText};

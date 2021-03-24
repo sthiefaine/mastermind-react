@@ -7,7 +7,7 @@ export default {
   rules_good_dot: "Uma cor ta bem colocada.",
   rules_wrong_dot: "Uma cor não ta bem colocada.",
   //
-  settings_posibilities: "Possibilidades:",
+  settings_posibilities: "Possibilidades :",
   settings_tries: "Tentativas :",
   settings_reset: "Restaurar configurações",
   //
