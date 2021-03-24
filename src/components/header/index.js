@@ -2,14 +2,17 @@ import { Link, useLocation } from "react-router-dom";
 
 import { useSelector } from "react-redux";
 
-import { Fade } from "../../animations/fade";
-import ThemeSelector from "../themes";
-import { LetterMIcon, ReturnIcon } from "../../utils/icons";
 import Timer from "../timer";
+import ThemeSelector from "../themes";
 import LanguageSelector from "../language";
+
+import { Fade } from "../../animations/fade";
+
 // Styles
 import { HeaderStyled } from "../../styles/headerStyled";
 import { SpanStyled } from "../../styles/SpanStyled";
+
+import { LetterMIcon, ReturnIcon } from "../../utils/icons";
 
 function Header() {
   const location = useLocation();

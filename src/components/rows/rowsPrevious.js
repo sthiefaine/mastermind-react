@@ -1,16 +1,16 @@
 import { useEffect, useRef, memo } from "react";
 import { useSelector } from "react-redux";
 
-import { Fade } from "../../animations/fade";
-
 import Help from "./help";
 
+import { Fade } from "../../animations/fade";
+
 import { RowStyled } from "../../styles/RowStyled";
+
 function RowsPrevious() {
   const previousPlayValue = useSelector(
     (state) => state.mastermind.previousPlay
   );
-
   const userWinValue = useSelector((state) => state.mastermind.userWin);
   const triesValue = useSelector((state) => state.mastermind.tries);
   const solutionValue = useSelector((state) => state.mastermind.solution);

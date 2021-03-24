@@ -1,48 +1,39 @@
-/* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 
 import { useSelector, useDispatch } from "react-redux";
 
-import { jeuModel, cleanGame } from "../redux/slices/mastermind";
 import { resetTimer } from "../redux/slices/timer";
-import Translate from "../contexts/languages";
+
 import {
   incrementPossibilities,
   decrementPossibilities,
   incrementTries,
   decrementTries,
   resetSettings,
+  jeuModel,
+  cleanGame,
 } from "../redux/slices/mastermind";
 
 import Help from "../components/rows/help";
 
 import { RowStyled } from "../styles/RowStyled";
-
 import { ContainerStyled } from "../styles/ContainerStyled";
 import { ButtonXSStyled } from "../styles/buttons/ButtonXSStyled";
 import { ButtonXLStyled } from "../styles/buttons/ButtonXLStyled";
 import { SpanStyled } from "../styles/SpanStyled";
-
 import { MainStyled } from "../styles/MainStyled";
+
 import { Fade } from "../animations/fade";
+
+import Translate from "../contexts/languages";
+
 function Settings() {
   const dispatch = useDispatch();
 
-  const previousPlayValue = useSelector(
-    (state) => state.mastermind.previousPlay
-  );
-  const resetSolutionValue = useSelector(
-    (state) => state.mastermind.resetSolution
-  );
   const jeuModelValue = useSelector((state) => state.mastermind.jeuModel);
-  const colorPaletteValue = useSelector(
-    (state) => state.mastermind.colorPalette
-  );
-
-  const solutionValue = useSelector((state) => state.mastermind.solution);
-
   const possibilities = useSelector((state) => state.mastermind.possibilities);
   const tries = useSelector((state) => state.mastermind.tries);
+
   const colors = [
     "red",
     "blue",
@@ -55,13 +46,6 @@ function Settings() {
     "brown",
     "grey",
   ];
-
-  const randomNumber = function (maximumNumber, minimumNumber) {
-    return (
-      Math.floor(Math.random() * (maximumNumber - minimumNumber + 0)) +
-      minimumNumber
-    );
-  };
 
   useEffect(() => {
     if (jeuModelValue.length !== possibilities) {

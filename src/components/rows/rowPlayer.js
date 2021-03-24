@@ -29,9 +29,7 @@ function RowPlayer() {
   const previousPlayValue = useSelector(
     (state) => state.mastermind.previousPlay
   );
-
   const triesValue = useSelector((state) => state.mastermind.tries);
-
   const userClickValue = useSelector((state) => state.mastermind.userClick);
   const userWinValue = useSelector((state) => state.mastermind.userWin);
   const possibilities = useSelector((state) => state.mastermind.possibilities);

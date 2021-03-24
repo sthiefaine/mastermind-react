@@ -1,8 +1,14 @@
 import { useSelector, useDispatch } from "react-redux";
 
 import { cleanGame } from "../redux/slices/mastermind";
-
 import { resetTimer } from "../redux/slices/timer";
+
+import Translate from "../contexts/languages";
+
+import { LinkXLStyled } from "../styles/links/LinkXLStyled";
+import { LinkSStyled } from "../styles/links/LinkSStyled";
+import { MainStyled } from "../styles/MainStyled";
+
 import {
   ReactIcon,
   PlayIcon,
@@ -12,14 +18,6 @@ import {
 } from "../utils/icons";
 
 import { Fade } from "../animations/fade";
-
-import { LinkXLStyled } from "../styles/links/LinkXLStyled";
-
-import { LinkSStyled } from "../styles/links/LinkSStyled";
-
-import { MainStyled } from "../styles/MainStyled";
-
-import Translate from "../contexts/languages";
 function Home() {
   const dispatch = useDispatch();
   const previousPlayValue = useSelector(

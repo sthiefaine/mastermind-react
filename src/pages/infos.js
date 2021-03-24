@@ -1,12 +1,10 @@
-/* eslint-disable no-unused-vars */
-import { ContainerStyled } from "../styles/ContainerStyled";
-import { ButtonXSStyled } from "../styles/buttons/ButtonXSStyled";
-import { SpanStyled } from "../styles/SpanStyled";
-import React from "react";
-import { Fade } from "../animations/fade";
-import { MainStyled } from "../styles/MainStyled";
-import { WhatsAppIcon, GitIcon, TwitterIcon } from "../utils/socialIcons";
 import Translate from "../contexts/languages";
+
+import { ButtonXSStyled } from "../styles/buttons/ButtonXSStyled";
+import { MainStyled } from "../styles/MainStyled";
+
+import { WhatsAppIcon, GitIcon, TwitterIcon } from "../utils/socialIcons";
+
 function Infos() {
   return (
     <>
@@ -33,7 +31,6 @@ function Infos() {
             </a>
           </ButtonXSStyled>
         </div>
-        <p></p>
       </MainStyled>
     </>
   );
