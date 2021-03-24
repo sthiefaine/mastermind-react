@@ -8,10 +8,10 @@ import RowPlayer from "../components/rows/rowPlayer";
 import ColorsPalette from "../components/colorsPalette";
 import RowsPrevious from "../components/rows/rowsPrevious";
 import Firework from "../components/fireworks";
+import Rules from "../components/rules";
 
 import { Scrollbar } from "../styles/Scrollbar";
 import { ContainerStyled } from "../styles/ContainerStyled";
-
 import { MainStyled } from "../styles/MainStyled";
 
 function Game() {
@@ -74,14 +74,17 @@ function Game() {
 
   return (
     <>
-      <MainStyled>
+      <MainStyled className="flex-start">
         <Firework />
+        <Rules />
         {previousPlayValue.length > 0 && (
-          <ContainerStyled className="padding__top-bot">
-            <Scrollbar>
-              <RowsPrevious />
-            </Scrollbar>
-          </ContainerStyled>
+          <>
+            <ContainerStyled className="padding__top-bot">
+              <Scrollbar>
+                <RowsPrevious />
+              </Scrollbar>
+            </ContainerStyled>
+          </>
         )}
 
         <div className="solution2">

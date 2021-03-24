@@ -3,7 +3,7 @@
 ## Why ?
 Just a Mastermind Game to practice react.js, redux RTK, styled-components, localStorage and have fun while coding. 
 
-Let's Play [Mastermind-React Online](https://mastermind-react.netlify.app/infos)
+Let's Play [Mastermind-React Online](https://mastermind-react.netlify.app)
 
 ## Photos
 

@@ -11,7 +11,6 @@ import { HeaderStyled } from "../../styles/headerStyled";
 import { SpanStyled } from "../../styles/SpanStyled";
 
 function Header() {
-  console.log("header render");
   const location = useLocation();
 
   const previousPlayValue = useSelector(

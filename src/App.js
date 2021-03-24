@@ -26,10 +26,10 @@ function App() {
   // console
   useEffect(() => {
     console.log("Bonjour,");
-    console.log(
-      "%cMastermind in react.js was developed to learn and play with React.js & Redux toolkit (RTK).\n  Find me at:\n  * Twitter : https://twitter.com/dev_thief\n  * Github : https://github.com/sthiefaine\n  * Linkedin : https://www.linkedin.com/in/thiefainesimonnou",
-      "color:orange; font-size:20px; font-weight: bold; -webkit-text-stroke: 1px black; border-radius:10px; padding: 20px; background-color: black;"
-    );
+    // console.log(
+    //  "%cMastermind in react.js was developed to learn and play with React.js & Redux toolkit (RTK).\n  Find me at:\n  * Twitter : https://twitter.com/dev_thief\n  * Github : https://github.com/sthiefaine\n  * Linkedin : https://www.linkedin.com/in/thiefainesimonnou",
+    // "color:orange; font-size:20px; font-weight: bold; -webkit-text-stroke: 1px black; border-radius:10px; padding: 20px; background-color: black;"
+    // );
   }, []);
   return (
     <Wrapper>

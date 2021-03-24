@@ -135,11 +135,11 @@ html {
 }
 
 .mastermind__left {
-  margin-left: 1rem;
+  margin-left: 0.5rem;
 }
 
 .mastermind__right {
-  margin: 1rem;
+  margin: 0.5rem;
 
   width: 2.9rem;
   min-width: 2.9rem;

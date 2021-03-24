@@ -10,4 +10,8 @@ export const MainStyled = styled.main`
 
   justify-content: center;
   align-items: center;
+
+  &.flex-start {
+    justify-content: flex-start;
+  }
 `;

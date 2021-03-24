@@ -12,14 +12,13 @@ import {
 
 import { setTimerOn, resetTimer, stopTimer } from "../../redux/slices/timer";
 
-import { ArrowIcon, FingerClickIcon } from "../../utils/icons";
-
 import { Fade } from "../../animations/fade";
 
 import { RowStyled } from "../../styles/RowStyled";
-
+import { IconStyled } from "../../styles/IconStyled";
 import { ButtonXLStyled } from "../../styles/buttons/ButtonXLStyled";
-import { PlayAgainIcon } from "../../utils/icons";
+
+import { PlayAgainIcon, ArrowIcon, FingerClickIcon } from "../../utils/icons";
 
 function RowPlayer() {
   const dispatch = useDispatch();
@@ -76,7 +75,6 @@ function RowPlayer() {
 
   const compareWithSolution = () => {
     let userWinCounter = 0;
-
     let tmpHelpArray = [];
 
     for (let i = 0; i < possibilities; i++) {
@@ -192,7 +190,9 @@ function RowPlayer() {
             <div className="mastermind__right">
               {jeuValue.filter((element) => element != null).length ===
                 possibilities && (
-                <ArrowIcon onClick={() => handleSubmitPlay()} />
+                <IconStyled>
+                  <ArrowIcon onClick={() => handleSubmitPlay()} />
+                </IconStyled>
               )}
             </div>
           </RowStyled>

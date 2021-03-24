@@ -12,7 +12,6 @@ function RowsPrevious() {
   );
 
   const userWinValue = useSelector((state) => state.mastermind.userWin);
-
   const triesValue = useSelector((state) => state.mastermind.tries);
   const solutionValue = useSelector((state) => state.mastermind.solution);
 

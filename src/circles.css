@@ -29,12 +29,12 @@
   padding: 0.4rem;
   display: block;
 
-  box-shadow: 0rem 0rem 0.1rem white;
+  box-shadow: 0rem 0.1rem 0.1rem rgb(0, 0, 0);
 }
 
 .circle__help--white {
   background-color: white;
   padding: 0.4rem;
-  box-shadow: 0rem 0rem 0.2rem white;
+  box-shadow: 0rem 0.1rem 0.2rem rgb(0, 0, 0);
   display: block;
 }

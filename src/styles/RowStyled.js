@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const RowStyled = styled.div`
   height: 3.4rem;
+  width: 90%;
 
   background: ${({ theme }) => theme.rowColor};
   color: ${({ theme }) => theme.colorText};
@@ -10,10 +11,11 @@ export const RowStyled = styled.div`
   padding: 1rem;
 
   display: flex;
+
   justify-content: center;
   align-items: center;
 
-  margin: 0.6rem 1rem;
+  margin: 0.6rem auto;
 
   &.play2 {
     background-color: rgb(135, 57, 249);
@@ -32,6 +34,15 @@ export const RowStyled = styled.div`
   }
 
   &.margin0 {
-    margin: 0rem;
+    margin: 0rem auto;
+  }
+
+  &.rules {
+    height: auto;
+    flex-direction: column;
+    align-items: start;
+  }
+  & > div > p {
+    margin-left: 0.5rem;
   }
 `;
