@@ -19,6 +19,7 @@ import { LinkSStyled } from "../styles/links/LinkSStyled";
 
 import { MainStyled } from "../styles/MainStyled";
 
+import Translate from "../contexts/languages";
 function Home() {
   const dispatch = useDispatch();
   const previousPlayValue = useSelector(
@@ -94,7 +95,9 @@ function Home() {
               <span className="button-icon">
                 <PlayIcon />
               </span>
-              <span className="button-text">Jouer</span>
+              <span className="button-text">
+                <Translate text="play" />
+              </span>
             </LinkXLStyled>
           </Fade>
         )}
@@ -109,7 +112,9 @@ function Home() {
             <div className="button-icon">
               <SettingIcon />
             </div>
-            <div className="button-text">Paramètres</div>
+            <div className="button-text">
+              <Translate text="settings" />
+            </div>
           </LinkXLStyled>
         </Fade>
 
@@ -124,7 +129,9 @@ function Home() {
             <div className="button-icon">
               <InfoIcon />
             </div>
-            <div className="button-text">Informations</div>
+            <div className="button-text">
+              <Translate text="informations" />
+            </div>
           </LinkXLStyled>
         </Fade>
       </div>

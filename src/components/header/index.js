@@ -6,6 +6,7 @@ import { Fade } from "../../animations/fade";
 import ThemeSelector from "../themes";
 import { LetterMIcon, ReturnIcon } from "../../utils/icons";
 import Timer from "../timer";
+import LanguageSelector from "../language";
 // Styles
 import { HeaderStyled } from "../../styles/headerStyled";
 import { SpanStyled } from "../../styles/SpanStyled";
@@ -58,6 +59,8 @@ function Header() {
           </>
         )}
       </div>
+      {location.pathname === "/" && <LanguageSelector />}
+
       <ThemeSelector />
     </HeaderStyled>
   );

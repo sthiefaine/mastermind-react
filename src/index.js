@@ -8,7 +8,7 @@ import * as serviceWorker from "./serviceWorker";
 
 // import context
 import { ThemeProvider } from "./contexts/themes";
-
+import { LanguageProvider } from "./contexts/languages";
 import App from "./App";
 
 import "./index.css";
@@ -16,11 +16,13 @@ import "./index.css";
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <ThemeProvider>
-        <Router>
-          <App />
-        </Router>
-      </ThemeProvider>
+      <LanguageProvider>
+        <ThemeProvider>
+          <Router>
+            <App />
+          </Router>
+        </ThemeProvider>
+      </LanguageProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")

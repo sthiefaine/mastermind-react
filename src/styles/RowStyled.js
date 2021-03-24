@@ -42,6 +42,7 @@ export const RowStyled = styled.div`
     flex-direction: column;
     align-items: start;
   }
+
   & > div > p {
     margin-left: 0.5rem;
   }

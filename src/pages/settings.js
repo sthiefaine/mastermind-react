@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { jeuModel, cleanGame } from "../redux/slices/mastermind";
 import { resetTimer } from "../redux/slices/timer";
-
+import Translate from "../contexts/languages";
 import {
   incrementPossibilities,
   decrementPossibilities,
@@ -86,7 +86,9 @@ function Settings() {
       <MainStyled className="flex__jc__space-around">
         <ContainerStyled>
           <div className="flex-row flex__jc__space-between">
-            <label className="settings-label">Choix</label>
+            <label className="settings-label">
+              <Translate text="settings_posibilities" />
+            </label>
             <div className="btns-control">
               <ButtonXSStyled
                 type="button"
@@ -125,7 +127,9 @@ function Settings() {
 
         <ContainerStyled>
           <div className="flex-row flex__jc__space-between">
-            <label className="settings-label">Essais</label>
+            <label className="settings-label">
+              <Translate text="settings_tries" />
+            </label>
             <div className="flex-row">
               <ButtonXSStyled
                 type="button"
@@ -159,7 +163,9 @@ function Settings() {
             className="red"
             onClick={() => onClickResetSetting()}
           >
-            <div className="button-text">Reset Setting</div>
+            <div className="button-text">
+              <Translate text="settings_reset" />
+            </div>
           </ButtonXLStyled>
         </Fade>
       </MainStyled>

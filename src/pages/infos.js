@@ -6,11 +6,14 @@ import React from "react";
 import { Fade } from "../animations/fade";
 import { MainStyled } from "../styles/MainStyled";
 import { WhatsAppIcon, GitIcon, TwitterIcon } from "../utils/socialIcons";
+import Translate from "../contexts/languages";
 function Infos() {
   return (
     <>
       <MainStyled>
-        <h1>Développé par</h1>
+        <h1>
+          <Translate text="informations_title" />
+        </h1>
         <h2>Thiéfaine Simonnou</h2>
 
         <div className="flex-row">
